@@ -1,5 +1,7 @@
 # 项目介绍
 基于MaaFramework的python项目，定位是处理收菜等重复操作劳动，拒绝给佩丽卡打黑工
+
+视频介绍：[bilibili.com/video/BV1RxF4znEsU](bilibili.com/video/BV1RxF4znEsU)
 ## 亮点功能
 - 全自动协议空间，自动开始，自动战斗，自动结束战斗。
 - 自动跑图领取领取猫头鹰，到达控制中枢控制台
