@@ -19,12 +19,12 @@
     "$__mpe_code": {
       "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\协议空间.json",
       "filename": "协议空间",
-      "lastSyncTime": 1770424812536,
+      "lastSyncTime": 1770477115686,
       "prefix": "",
       "savedViewport": {
-        "x": -8052,
-        "y": 352,
-        "zoom": 1
+        "x": -12424,
+        "y": -110,
+        "zoom": 1.06
       },
       "version": "v1.0.3"
     }
@@ -466,13 +466,13 @@
     "on_error": [
       "[Anchor]再次"
     ],
-    "timeout": 5000
+    "timeout": 10000
   },
   "协议空间-打开地图": {
     "$__mpe_code": {
       "position": {
-        "x": 3665,
-        "y": -25
+        "x": 3767,
+        "y": -4
       }
     },
     "action": {
@@ -529,7 +529,7 @@
   "协议空间-枢纽区大地图点击": {
     "$__mpe_code": {
       "position": {
-        "x": 4408,
+        "x": 4387,
         "y": -14
       }
     },
