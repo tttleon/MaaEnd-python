@@ -1,0 +1,202 @@
+{
+  "$__mpe_anchor_重新开始_矿脉源区医疗站上猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7161,
+        "y": 198
+      }
+    }
+  },
+  "$__mpe_config_矿脉源区医疗站上猫头鹰": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\猫头鹰\\矿脉源区医疗站上猫头鹰.json",
+      "filename": "矿脉源区医疗站上猫头鹰",
+      "isModifiedExternally": true,
+      "lastSyncTime": 1770194300910,
+      "prefix": "",
+      "savedViewport": {
+        "x": -8266,
+        "y": 463,
+        "zoom": 1.36
+      },
+      "version": "v1.0.2"
+    }
+  },
+  "矿脉源区医疗站上猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4815,
+        "y": -55
+      }
+    },
+    "anchor": [
+      "重新开始"
+    ],
+    "next": [
+      "矿脉源区医疗站上猫头鹰-打开地图"
+    ]
+  },
+  "矿脉源区医疗站上猫头鹰-去猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6607,
+        "y": -60
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "根据提供点进行人物移动_Func",
+        "custom_action_param": [
+          {
+            "direction": "bottom",
+            "map_x_move_offset": 0,
+            "map_y_move_offset": 0,
+            "points": [
+              {
+                "x": 220,
+                "y": 83
+              },
+              {
+                "x": 105,
+                "y": 26
+              },
+              {
+                "map_y_move_offset": -300,
+                "x": 46,
+                "y": -108
+              },
+              {
+                "map_y_move_offset": -300,
+                "x": -51,
+                "y": -71
+              },
+              {
+                "map_y_move_offset": -300,
+                "x": -43,
+                "y": -43
+              }
+            ],
+            "template_img_name": "医疗站上猫头鹰.png"
+          }
+        ]
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰-猫头鹰点击收取资源"
+    ],
+    "on_error": [
+      "[Anchor]重新开始"
+    ],
+    "post_delay": 600
+  },
+  "矿脉源区医疗站上猫头鹰-打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5180,
+        "y": -49
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "打开地图_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰-点击地区总览"
+    ]
+  },
+  "矿脉源区医疗站上猫头鹰-点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5465,
+        "y": -83
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "点击地区总览_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰-矿脉源区医疗站上大地图点击"
+    ]
+  },
+  "矿脉源区医疗站上猫头鹰-猫头鹰点击收取资源": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6908,
+        "y": -195
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "猫头鹰点击收取资源_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "on_error": [
+      "[Anchor]重新开始"
+    ],
+    "timeout": 4000
+  },
+  "矿脉源区医疗站上猫头鹰-矿脉源区医疗站上传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6029,
+        "y": -39
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "矿脉源区-医疗站传送点_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰_加载中界面判断"
+    ]
+  },
+  "矿脉源区医疗站上猫头鹰-矿脉源区医疗站上大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5755,
+        "y": -48
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "矿脉源区大地图点击_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰-矿脉源区医疗站上传送点点击"
+    ]
+  },
+  "矿脉源区医疗站上猫头鹰_加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6319,
+        "y": -174
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "矿脉源区医疗站上猫头鹰-去猫头鹰"
+    ]
+  }
+}

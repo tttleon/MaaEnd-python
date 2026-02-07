@@ -1,0 +1,1100 @@
+{
+  "$__mpe_anchor_A_协议空间": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9766,
+        "y": -90
+      }
+    }
+  },
+  "$__mpe_anchor_再次_协议空间": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12847,
+        "y": 550
+      }
+    }
+  },
+  "$__mpe_config_协议空间": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\协议空间.json",
+      "filename": "协议空间",
+      "lastSyncTime": 1770424812536,
+      "prefix": "",
+      "savedViewport": {
+        "x": -8052,
+        "y": 352,
+        "zoom": 1
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "协议空间": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5380,
+        "y": -26
+      }
+    },
+    "anchor": [
+      "再次",
+      "再次2"
+    ],
+    "next": [
+      "协议空间-修整"
+    ]
+  },
+  "协议空间-一级选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6866,
+        "y": -404
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-二级选择1"
+    ],
+    "on_error": [
+      "协议空间-二级选择2滑动"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "武器养成"
+        ],
+        "roi": [
+          43,
+          205,
+          220,
+          379
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 2000
+  },
+  "协议空间-二级选择1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7236,
+        "y": -420
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          673,
+          70,
+          -101,
+          -12
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-等级选择"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "协议空间·武器经验"
+        ],
+        "roi": [
+          387,
+          159,
+          206,
+          355
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-二级选择2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7295,
+        "y": -57
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          673,
+          70,
+          -101,
+          -12
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-等级选择"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "协议空间·技能提升"
+        ],
+        "roi": [
+          375,
+          159,
+          222,
+          495
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-二级选择2滑动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6988,
+        "y": -54
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          750,
+          609,
+          25,
+          17
+        ],
+        "end": [
+          [
+            735,
+            495,
+            19,
+            16
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "协议空间-二级选择2"
+    ]
+  },
+  "协议空间-修整": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5657,
+        "y": -133
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-修整完毕"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "休整"
+        ],
+        "roi": [
+          725,
+          342,
+          173,
+          163
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-修整完毕": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5922,
+        "y": -235
+      }
+    },
+    "next": [
+      "协议空间-打开菜单"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "休整"
+        ],
+        "roi": [
+          725,
+          342,
+          173,
+          163
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-准备点击右上角返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8816,
+        "y": -365
+      }
+    },
+    "next": [
+      "协议空间-返回1"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "进入协议空间"
+        ],
+        "roi": [
+          1056,
+          626,
+          129,
+          44
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-准备返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9502,
+        "y": -445
+      }
+    },
+    "next": [
+      "协议空间-返回2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "行动手册"
+        ],
+        "roi": [
+          58,
+          16,
+          78,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-准备返回3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10233,
+        "y": -546
+      }
+    },
+    "next": [
+      "协议空间-返回3"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "干员"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-判断理智够不够": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8118,
+        "y": 19
+      }
+    },
+    "next": [
+      "协议空间-理智不足"
+    ],
+    "on_error": [
+      "协议空间-编队进入协议空间确认在这个页面"
+    ],
+    "timeout": 3000
+  },
+  "协议空间-前往触碰光点": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9568,
+        "y": 259
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 700,
+        "target": [
+          186,
+          470,
+          18,
+          16
+        ]
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "协议空间-触碰光点"
+    ]
+  },
+  "协议空间-升级了": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9306,
+        "y": -219
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "on_error": [
+      "[Anchor]A"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "理智上限"
+        ],
+        "roi": [
+          591,
+          211,
+          95,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-协议空间战斗_cust": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10220,
+        "y": 240
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "协议空间战斗_Func"
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-协议空间战斗结束触摸烟雾"
+    ]
+  },
+  "协议空间-协议空间战斗结束触摸烟雾": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10579,
+        "y": 261
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "协议空间战斗结束触摸烟雾_Func"
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-可领取奖励",
+      "协议空间-领取奖励"
+    ]
+  },
+  "协议空间-可领取奖励": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11003,
+        "y": 70
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          934,
+          449,
+          22,
+          20
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-领取奖励"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "有可领取的奖励"
+        ],
+        "roi": [
+          561,
+          103,
+          162,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-右上角关闭": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12347,
+        "y": 426
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          27,
+          18,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-结束升级了"
+    ],
+    "on_error": [
+      "[Anchor]再次"
+    ],
+    "timeout": 5000
+  },
+  "协议空间-打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3665,
+        "y": -25
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "打开地图_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-点击地区总览"
+    ]
+  },
+  "协议空间-打开菜单": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6131,
+        "y": -358
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          27,
+          18,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-点击行动手册"
+    ]
+  },
+  "协议空间-枢纽区基地电站传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4681,
+        "y": -22
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "枢纽区-基地电站传送点_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间_去传送点加载中界面判断"
+    ]
+  },
+  "协议空间-枢纽区大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4408,
+        "y": -14
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "枢纽区大地图点击_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-枢纽区基地电站传送点点击"
+    ]
+  },
+  "协议空间-点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4085,
+        "y": -9
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "点击地区总览_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-枢纽区大地图点击"
+    ]
+  },
+  "协议空间-点击索引": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6623,
+        "y": -144
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-一级选择"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "索引"
+        ],
+        "roi": [
+          533,
+          98,
+          51,
+          32
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-点击行动手册": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6403,
+        "y": -394
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          16,
+          5,
+          -34,
+          -9
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-点击索引"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "行动手册"
+        ],
+        "roi": [
+          1031,
+          183,
+          81,
+          44
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-理智不足": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8530,
+        "y": -208
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          511,
+          470,
+          72,
+          37
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-准备点击右上角返回"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "当前理智不足"
+        ],
+        "roi": [
+          325,
+          265,
+          167,
+          60
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 2000
+  },
+  "协议空间-离开": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11684,
+        "y": 365
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间_离开加载中界面判断"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "离开"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-等级选择": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7628,
+        "y": -249
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-进入协议空间"
+    ],
+    "post_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "一级"
+        ],
+        "roi": [
+          88,
+          114,
+          65,
+          328
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-结束升级了": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12777,
+        "y": 188
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "理智上限"
+        ],
+        "roi": [
+          591,
+          211,
+          95,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-编队进入协议空间_副本1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8635,
+        "y": 139
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1056,
+          628,
+          121,
+          35
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间_加进入载中界面判断"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "快捷编队"
+        ],
+        "roi": [
+          826,
+          628,
+          98,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-编队进入协议空间确认在这个页面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8366,
+        "y": 168
+      }
+    },
+    "next": [
+      "协议空间-编队进入协议空间_副本1"
+    ],
+    "post_delay": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "快捷编队"
+        ],
+        "roi": [
+          826,
+          628,
+          98,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-触碰光点": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9855,
+        "y": 206
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 600
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "协议空间-协议空间战斗_cust"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "触碰"
+        ],
+        "roi": [
+          768,
+          403,
+          60,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-返回1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9146,
+        "y": -417
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          27,
+          18,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-准备返回2"
+    ]
+  },
+  "协议空间-返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9854,
+        "y": -464
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          27,
+          18,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-准备返回3"
+    ]
+  },
+  "协议空间-返回3": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10599,
+        "y": -530
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          27,
+          18,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "post_delay": 400
+  },
+  "协议空间-进入协议空间": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7937,
+        "y": -229
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-判断理智够不够"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "进入协议空间"
+        ],
+        "roi": [
+          1051,
+          625,
+          138,
+          41
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-进入成功": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9195,
+        "y": 596
+      }
+    },
+    "next": [
+      "协议空间-前往触碰光点"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "撤离"
+        ],
+        "roi": [
+          62,
+          13,
+          71,
+          43
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间-领取奖励": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11325,
+        "y": 367
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          804,
+          633,
+          98,
+          33
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "协议空间-离开"
+    ]
+  },
+  "协议空间_加进入载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8937,
+        "y": 128
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "anchor": [
+      "A"
+    ],
+    "next": [
+      "[JumpBack]协议空间-升级了",
+      "[JumpBack]协议空间_机制特性点击",
+      "协议空间-进入成功"
+    ],
+    "timeout": 2000
+  },
+  "协议空间_去传送点到修整点": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5175,
+        "y": -266
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 600,
+        "target": [
+          184,
+          476,
+          17,
+          22
+        ]
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "协议空间"
+    ]
+  },
+  "协议空间_去传送点加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4915,
+        "y": -266
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间_去传送点到修整点"
+    ],
+    "post_delay": 1000
+  },
+  "协议空间_机制特性点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9278,
+        "y": 75
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1181,
+          172,
+          57,
+          57
+        ]
+      },
+      "type": "Click"
+    },
+    "on_error": [
+      "[Anchor]A"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "机制特性"
+        ],
+        "roi": [
+          578,
+          167,
+          121,
+          60
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议空间_离开加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12011,
+        "y": 346
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "协议空间-右上角关闭"
+    ]
+  }
+}

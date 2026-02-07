@@ -1,0 +1,814 @@
+{
+  "$__mpe_anchor_打开地图重新跑图_新建Pipeline11": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17273,
+        "y": 808
+      }
+    }
+  },
+  "$__mpe_anchor_重新检查黄点_新建Pipeline11": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20306,
+        "y": 249
+      }
+    }
+  },
+  "$__mpe_config_新建Pipeline11": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\总控中枢.json",
+      "filename": "新建Pipeline11",
+      "lastSyncTime": 1770425809657,
+      "prefix": "",
+      "savedViewport": {
+        "x": -13042,
+        "y": 85,
+        "zoom": 0.76
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "总控中枢": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13916,
+        "y": 591
+      }
+    },
+    "next": [
+      "总控中枢-打开地图"
+    ]
+  },
+  "总控中枢-不在帝江号": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14829,
+        "y": 690
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-现在在帝江号"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "帝江号"
+        ],
+        "roi": [
+          1170,
+          118,
+          62,
+          30
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-制造仓-数量拉满": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18831,
+        "y": 355
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          996,
+          495,
+          18,
+          22
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-制造仓-数量拉满_确认"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制造数量"
+        ],
+        "roi": [
+          826,
+          449,
+          97,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-制造仓-数量拉满_确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19166,
+        "y": 361
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-制造仓_制造中"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          1032,
+          584,
+          70,
+          43
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-制造仓_制造中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19511,
+        "y": 413
+      }
+    },
+    "next": [
+      "总控中枢-退出某个舱室"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制造中",
+          "已暂停"
+        ],
+        "roi": [
+          836,
+          581,
+          74,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-加载中判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16658,
+        "y": 225
+      }
+    },
+    "recognition": {
+      "param": {
+        "template": [
+          "loading-logo.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "总控中枢-在帝江号": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14864,
+        "y": 297
+      }
+    },
+    "next": [
+      "总控中枢-地图右上角移动"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "帝江号"
+        ],
+        "roi": [
+          106,
+          21,
+          62,
+          27
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-地图右上角移动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15387,
+        "y": 446
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          14,
+          356,
+          2,
+          25
+        ],
+        "duration": [
+          700
+        ],
+        "end": [
+          [
+            1024,
+            129,
+            10,
+            17
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "总控中枢-地图右上角移动2"
+    ]
+  },
+  "总控中枢-地图右上角移动2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15650,
+        "y": 434
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          14,
+          356,
+          2,
+          25
+        ],
+        "duration": [
+          700
+        ],
+        "end": [
+          [
+            1024,
+            129,
+            10,
+            17
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "总控中枢-舰桥传送点点击"
+    ]
+  },
+  "总控中枢-打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14176,
+        "y": 591
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          112,
+          107,
+          44,
+          48
+        ]
+      },
+      "type": "Click"
+    },
+    "anchor": [
+      "打开地图重新跑图"
+    ],
+    "next": [
+      "总控中枢-现在在不在帝江号上"
+    ]
+  },
+  "总控中枢-收取_制造": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18540,
+        "y": 376
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-制造仓-数量拉满"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制造舱收集产出"
+        ],
+        "roi": [
+          561,
+          103,
+          164,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-收取_培养": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18538,
+        "y": 108
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢_培养-再次培养"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "培养获得"
+        ],
+        "roi": [
+          592,
+          105,
+          100,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-是否到达": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16981,
+        "y": 589
+      }
+    },
+    "next": [
+      "总控中枢-点击查看"
+    ],
+    "on_error": [
+      "[Anchor]打开地图重新跑图"
+    ],
+    "timeout": 2000
+  },
+  "总控中枢-点击成功": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17484,
+        "y": 377
+      }
+    },
+    "anchor": [
+      "重新检查黄点"
+    ],
+    "next": [
+      "总控中枢-黄点待收取",
+      "滑动"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "运转报告"
+        ],
+        "roi": [
+          46,
+          67,
+          84,
+          31
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 2000
+  },
+  "总控中枢-点击查看": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17225,
+        "y": 377
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-点击成功"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "查看"
+        ],
+        "roi": [
+          764,
+          385,
+          62,
+          106
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-现在在不在帝江号上": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14503,
+        "y": 404
+      }
+    },
+    "next": [
+      "总控中枢-在帝江号"
+    ],
+    "on_error": [
+      "总控中枢-不在帝江号"
+    ],
+    "timeout": 5000
+  },
+  "总控中枢-现在在帝江号": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15117,
+        "y": 683
+      }
+    },
+    "next": [
+      "总控中枢-地图右上角移动"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "帝江号"
+        ],
+        "roi": [
+          106,
+          21,
+          62,
+          27
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢-移动到控制台": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16633,
+        "y": 693
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "根据提供点进行人物移动_Func",
+        "custom_action_param": [
+          {
+            "direction": "bottom",
+            "black_arrow_need_resize": true,
+            "is_DJH": true,
+            "map_x_move_offset": 0,
+            "map_y_move_offset": 0,
+            "points": [
+              {
+                "x": 261,
+                "y": 50
+              },
+              {
+                "x": 199,
+                "y": 61
+              },
+              {
+                "x": 134,
+                "y": 60
+              },
+              {
+                "x": 115,
+                "y": 13
+              },
+              {
+                "x": 54,
+                "y": 2
+              }
+            ],
+            "template_img_name": "舰桥控制台.png"
+          }
+        ]
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "总控中枢-是否到达"
+    ],
+    "on_error": [
+      "[Anchor]打开地图重新跑图"
+    ]
+  },
+  "总控中枢-舰桥传送点传送": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16303,
+        "y": 441
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[JumpBack]总控中枢-加载中判断"
+    ],
+    "on_error": [
+      "总控中枢-移动到控制台"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "传送"
+        ],
+        "roi": [
+          1140,
+          630,
+          47,
+          30
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 3000
+  },
+  "总控中枢-舰桥传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15981,
+        "y": 439
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          717,
+          188,
+          13,
+          15
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-舰桥传送点传送"
+    ]
+  },
+  "总控中枢-退出": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18355,
+        "y": 743
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "总控中枢-退出某个舱室": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19894,
+        "y": 379
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[Anchor]重新检查黄点"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "总控中枢-黄点待收取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17908,
+        "y": 182
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          -157,
+          14,
+          65,
+          22
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取"
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            254,
+            117,
+            0
+          ]
+        ],
+        "roi": [
+          709,
+          510,
+          532,
+          57
+        ],
+        "upper": [
+          [
+            255,
+            117,
+            0
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    },
+    "repeat": 1
+  },
+  "总控中枢_培养-再次培养": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18885,
+        "y": 82
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢_培养-再次培养确认"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "再次培养"
+        ],
+        "roi": [
+          859,
+          567,
+          97,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢_培养-再次培养确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19211,
+        "y": 83
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢_培养-再次培养确认_培养中"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          794,
+          470,
+          63,
+          44
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "总控中枢_培养-再次培养确认_培养中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19508,
+        "y": 81
+      }
+    },
+    "next": [
+      "总控中枢-退出某个舱室"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "培养中",
+          "已暂停"
+        ],
+        "roi": [
+          840,
+          568,
+          79,
+          41
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18186,
+        "y": 179
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "总控中枢-收取_培养",
+      "总控中枢-收取_制造"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "收取"
+        ],
+        "roi": [
+          767,
+          577,
+          183,
+          46
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 2000
+  },
+  "滑动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17773,
+        "y": 579
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          1173,
+          587,
+          8,
+          11
+        ],
+        "end": [
+          [
+            469,
+            581,
+            14,
+            22
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "总控中枢-黄点待收取"
+    ],
+    "on_error": [
+      "总控中枢-退出"
+    ],
+    "timeout": 2000
+  }
+}

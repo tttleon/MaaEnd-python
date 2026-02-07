@@ -1,0 +1,284 @@
+{
+  "$__mpe_config_新建Pipeline7": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\进行1次简易制作.json",
+      "filename": "新建Pipeline7",
+      "lastSyncTime": 1770211249951,
+      "prefix": "",
+      "savedViewport": {
+        "x": -7609,
+        "y": 239,
+        "zoom": 0.53
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "进行1次简易制作": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15075,
+        "y": 236
+      }
+    },
+    "next": [
+      "进行1次简易制作-打开背包"
+    ]
+  },
+  "进行1次简易制作-制作": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16840,
+        "y": 376
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-制作采成功"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作"
+        ],
+        "roi": [
+          1133,
+          629,
+          55,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-制作采成功": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17257,
+        "y": 359
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-返回"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作成功"
+        ],
+        "roi": [
+          585,
+          105,
+          113,
+          31
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-应急食药": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16097,
+        "y": 192
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-柑实粉末"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "应急食药"
+        ],
+        "roi": [
+          107,
+          76,
+          87,
+          40
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-打开背包": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15404,
+        "y": 221
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1084,
+          29,
+          29,
+          20
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-简易制作"
+    ]
+  },
+  "进行1次简易制作-材料不足": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16829,
+        "y": -35
+      }
+    },
+    "next": [
+      "进行1次简易制作-返回"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "当前材料不足"
+        ],
+        "roi": [
+          1044,
+          628,
+          143,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-柑实粉末": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16451,
+        "y": 184
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-材料不足",
+      "进行1次简易制作-制作"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "柑实粉末"
+        ],
+        "roi": [
+          115,
+          190,
+          92,
+          33
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 2000
+  },
+  "进行1次简易制作-简易制作": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15754,
+        "y": 193
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-应急食药"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "简易制作"
+        ],
+        "roi": [
+          1118,
+          130,
+          76,
+          32
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-简易制作_副本16": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18114,
+        "y": 343
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1219,
+          72,
+          28,
+          28
+        ]
+      },
+      "type": "Click"
+    },
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "简易制作"
+        ],
+        "roi": [
+          1118,
+          130,
+          76,
+          32
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "进行1次简易制作-返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17728,
+        "y": 364
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          25,
+          16,
+          18
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "进行1次简易制作-简易制作_副本16"
+    ],
+    "post_delay": 400
+  }
+}

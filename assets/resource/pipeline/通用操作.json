@@ -1,0 +1,538 @@
+{
+  "$__mpe_anchor_加载中界面判断_开始_通用操作": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4544,
+        "y": -150
+      }
+    }
+  },
+  "$__mpe_anchor_黑屏中界面判断_开始_通用操作": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4617,
+        "y": 56
+      }
+    }
+  },
+  "$__mpe_config_通用操作": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\通用操作.json",
+      "filename": "通用操作",
+      "lastSyncTime": 1770361535767,
+      "prefix": "",
+      "savedViewport": {
+        "x": -2592,
+        "y": -452,
+        "zoom": 1.17
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "加载中界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4267,
+        "y": -303
+      }
+    },
+    "next": [
+      "[Anchor]加载中界面判断_开始"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "loading-logo.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3922,
+        "y": -216
+      }
+    },
+    "anchor": [
+      "加载中界面判断_开始"
+    ],
+    "next": [
+      "加载中界面"
+    ],
+    "on_error": [
+      "加载结束"
+    ],
+    "timeout": 2000
+  },
+  "加载结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4274,
+        "y": -59
+      }
+    }
+  },
+  "协议传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3544,
+        "y": 704
+      }
+    },
+    "next": [
+      "协议传送点点击-协议传送点",
+      "协议传送点点击-传送"
+    ],
+    "timeout": 3000
+  },
+  "协议传送点点击-传送": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4103,
+        "y": 656
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "传送"
+        ],
+        "roi": [
+          1120,
+          625,
+          73,
+          47
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "协议传送点点击-协议传送点": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3807,
+        "y": 439
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "协议传送点点击-传送"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "协议传送点"
+        ],
+        "roi": [
+          957,
+          400,
+          228,
+          214
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "地图上移到底": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3202,
+        "y": 807
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          17,
+          609,
+          0,
+          0
+        ],
+        "end": [
+          [
+            11,
+            178,
+            0,
+            0
+          ]
+        ]
+      },
+      "type": "Swipe"
+    }
+  },
+  "地图下移到底": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3203,
+        "y": 604
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          11,
+          7,
+          0,
+          0
+        ],
+        "end": [
+          [
+            11,
+            600,
+            0,
+            0
+          ]
+        ]
+      },
+      "type": "Swipe"
+    }
+  },
+  "地图右移到底": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2937,
+        "y": 801
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          58,
+          710,
+          0,
+          0
+        ],
+        "end": [
+          [
+            1200,
+            710,
+            0,
+            0
+          ]
+        ]
+      },
+      "type": "Swipe"
+    }
+  },
+  "地图左移到底": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2941,
+        "y": 606
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          1181,
+          720,
+          0,
+          0
+        ],
+        "end": [
+          [
+            52,
+            710,
+            0,
+            0
+          ]
+        ]
+      },
+      "type": "Swipe"
+    }
+  },
+  "地图比例缩到最小": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2668,
+        "y": 616
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1221,
+          449,
+          9,
+          12
+        ]
+      },
+      "type": "LongPress"
+    }
+  },
+  "帝江号上打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2407,
+        "y": -27
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          112,
+          110,
+          48,
+          44
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "检查是否打开地图_副本2"
+    ],
+    "timeout": 1000
+  },
+  "打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2490,
+        "y": -400
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          112,
+          110,
+          48,
+          44
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "检查是否打开地图"
+    ],
+    "timeout": 3000
+  },
+  "放大地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2665,
+        "y": 426
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1226,
+          340
+        ]
+      },
+      "type": "LongPress"
+    }
+  },
+  "放大地图到最大": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2657,
+        "y": 254
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1220,
+          220,
+          13,
+          13
+        ]
+      },
+      "type": "LongPress"
+    }
+  },
+  "是否成功点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3553,
+        "y": -143
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "地区建设等级"
+        ],
+        "roi": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "检查是否打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2903,
+        "y": -402
+      }
+    },
+    "post_delay": 600,
+    "recognition": {
+      "param": {
+        "expected": [
+          "地区总览"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "检查是否打开地图_副本2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2809,
+        "y": -55
+      }
+    },
+    "post_delay": 600,
+    "recognition": {
+      "param": {
+        "expected": [
+          "帝江号"
+        ],
+        "roi": [
+          107,
+          21,
+          59,
+          28
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "点击右上角叉叉": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2960,
+        "y": 423
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1211,
+          24,
+          21,
+          21
+        ]
+      },
+      "type": "Click"
+    }
+  },
+  "点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3267,
+        "y": -140
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "是否成功点击地区总览"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "地区总览"
+        ],
+        "roi": [
+          978,
+          605,
+          268,
+          84
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "猫头鹰点击收取资源": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4464,
+        "y": 546
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "收取资源"
+        ],
+        "roi": [
+          712,
+          337,
+          270,
+          228
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑屏判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3943,
+        "y": 142
+      }
+    },
+    "anchor": [
+      "黑屏中界面判断_开始"
+    ],
+    "next": [
+      "黑屏判断-判断中"
+    ],
+    "timeout": 2000
+  },
+  "黑屏判断-判断中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4272,
+        "y": 86
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "黑屏判断Func_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "[Anchor]黑屏中界面判断_开始"
+    ],
+    "on_error": [
+      "黑屏结束"
+    ]
+  },
+  "黑屏结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4590,
+        "y": 304
+      }
+    }
+  }
+}

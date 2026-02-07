@@ -1,0 +1,351 @@
+{
+  "$__mpe_config_新建Pipeline6": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\制作一个装备.json",
+      "filename": "新建Pipeline6",
+      "lastSyncTime": 1770210575646,
+      "prefix": "",
+      "savedViewport": {
+        "x": -13398,
+        "y": 288,
+        "zoom": 0.92
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "制作一个装备": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12866,
+        "y": 306
+      }
+    },
+    "next": [
+      "制作一个装备-右上角点击打开菜单"
+    ]
+  },
+  "制作一个装备-制作完成点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15710,
+        "y": 398
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-返回制造界面"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制造完成"
+        ],
+        "roi": [
+          594,
+          106,
+          96,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-右上角点击打开菜单": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13205,
+        "y": 308
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1224,
+          28,
+          14,
+          20
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-点击装备加工"
+    ]
+  },
+  "制作一个装备-开始制造": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15396,
+        "y": 407
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-制作完成点击"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制作"
+        ],
+        "roi": [
+          1123,
+          626,
+          52,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-是否滑动到最底下": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14321,
+        "y": 105
+      }
+    },
+    "next": [
+      "制作一个装备-绿色装备"
+    ],
+    "on_error": [
+      "制作一个装备-装备制造页面"
+    ],
+    "timeout": 2000
+  },
+  "制作一个装备-材料不足（不制作）": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15393,
+        "y": 15
+      }
+    },
+    "next": [
+      "制作一个装备-返回"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "制造所需材料不足"
+        ],
+        "roi": [
+          1030,
+          629,
+          157,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-点击第一个绿色装备": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15035,
+        "y": 157
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          69,
+          371,
+          81,
+          78
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-材料不足（不制作）",
+      "制作一个装备-开始制造"
+    ],
+    "timeout": 2000
+  },
+  "制作一个装备-点击装备加工": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13538,
+        "y": 300
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          20,
+          6,
+          -51,
+          -18
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-装备制造页面"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "装备加工"
+        ],
+        "roi": [
+          1091,
+          357,
+          82,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-绿色装备": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14715,
+        "y": 153
+      }
+    },
+    "next": [
+      "制作一个装备-点击第一个绿色装备"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "集成重型装备组"
+        ],
+        "roi": [
+          85,
+          299,
+          151,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-装备制造页面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13939,
+        "y": 327
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 1000,
+        "target": [
+          436,
+          595,
+          3,
+          5
+        ]
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "制作一个装备-是否滑动到最底下"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "套组装备制造"
+        ],
+        "roi": [
+          103,
+          16,
+          141,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16388,
+        "y": 287
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1216,
+          25,
+          14,
+          15
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-返回2"
+    ]
+  },
+  "制作一个装备-返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16722,
+        "y": 283
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1204,
+          40,
+          18,
+          16
+        ]
+      },
+      "type": "Click"
+    },
+    "post_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "装备加工"
+        ],
+        "roi": [
+          1091,
+          357,
+          82,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-返回制造界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16031,
+        "y": 393
+      }
+    },
+    "next": [
+      "制作一个装备-返回"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "套组装备制造"
+        ],
+        "roi": [
+          107,
+          17,
+          139,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  }
+}

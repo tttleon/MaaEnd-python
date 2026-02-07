@@ -1,0 +1,194 @@
+{
+  "$__mpe_anchor_重新开始_枢纽区基地电站猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7197,
+        "y": 106
+      }
+    }
+  },
+  "$__mpe_config_枢纽区基地电站猫头鹰": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\猫头鹰\\枢纽区基地电站猫头鹰.json",
+      "filename": "枢纽区基地电站猫头鹰",
+      "isModifiedExternally": true,
+      "lastSyncTime": 1770194355172,
+      "prefix": "",
+      "savedViewport": {
+        "x": -5500,
+        "y": 508,
+        "zoom": 1
+      },
+      "version": "v1.0.2"
+    }
+  },
+  "枢纽区基地电站猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4815,
+        "y": -55
+      }
+    },
+    "anchor": [
+      "重新开始"
+    ],
+    "next": [
+      "枢纽区基地电站猫头鹰-打开地图"
+    ]
+  },
+  "枢纽区基地电站猫头鹰-去猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6607,
+        "y": -60
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "根据提供点进行人物移动_Func",
+        "custom_action_param": [
+          {
+            "direction": "bottom",
+            "map_x_move_offset": 0,
+            "map_y_move_offset": 0,
+            "points": [
+              {
+                "x": 113,
+                "y": 124
+              },
+              {
+                "x": 129,
+                "y": 86
+              },
+              {
+                "x": 155,
+                "y": 80
+              },
+              {
+                "x": 174,
+                "y": 66
+              }
+            ],
+            "template_img_name": "枢纽区猫头鹰.png"
+          }
+        ]
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰-猫头鹰点击收取资源"
+    ],
+    "on_error": [
+      "[Anchor]重新开始"
+    ],
+    "post_delay": 600
+  },
+  "枢纽区基地电站猫头鹰-打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5180,
+        "y": -49
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "打开地图_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰-点击地区总览"
+    ]
+  },
+  "枢纽区基地电站猫头鹰-枢纽区基地电站传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6043,
+        "y": -38
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "枢纽区-基地电站传送点_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰_加载中界面判断"
+    ]
+  },
+  "枢纽区基地电站猫头鹰-枢纽区大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5755,
+        "y": -48
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "枢纽区大地图点击_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰-枢纽区基地电站传送点点击"
+    ]
+  },
+  "枢纽区基地电站猫头鹰-点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5465,
+        "y": -83
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "点击地区总览_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰-枢纽区大地图点击"
+    ]
+  },
+  "枢纽区基地电站猫头鹰-猫头鹰点击收取资源": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6908,
+        "y": -195
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "猫头鹰点击收取资源_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "on_error": [
+      "[Anchor]重新开始"
+    ]
+  },
+  "枢纽区基地电站猫头鹰_加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6319,
+        "y": -174
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "枢纽区基地电站猫头鹰-去猫头鹰"
+    ]
+  }
+}

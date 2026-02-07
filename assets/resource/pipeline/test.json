@@ -1,0 +1,46 @@
+{
+  "$__mpe_config_test": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\test.json",
+      "filename": "test",
+      "lastSyncTime": 1770449823304,
+      "prefix": "",
+      "savedViewport": {
+        "x": -18392,
+        "y": 61,
+        "zoom": 1.6
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "新建节点1": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11765,
+        "y": 196
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          111,
+          186,
+          56,
+          49
+        ]
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "新建节点2"
+    ]
+  },
+  "新建节点2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12025,
+        "y": 196
+      }
+    }
+  }
+}

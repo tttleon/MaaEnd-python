@@ -1,0 +1,239 @@
+{
+  "$__mpe_anchor_重新开始_谷地通道猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 7255,
+        "y": 163
+      }
+    }
+  },
+  "$__mpe_config_谷地通道猫头鹰": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\猫头鹰\\谷地通道猫头鹰.json",
+      "filename": "谷地通道猫头鹰",
+      "isModifiedExternally": true,
+      "lastSyncTime": 1770194281784,
+      "prefix": "",
+      "savedViewport": {
+        "x": -8242,
+        "y": 409,
+        "zoom": 1.36
+      },
+      "version": "v1.0.2"
+    }
+  },
+  "谷地通道猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 4815,
+        "y": -55
+      }
+    },
+    "anchor": [
+      "重新开始"
+    ],
+    "next": [
+      "谷地通道猫头鹰-打开地图"
+    ]
+  },
+  "谷地通道猫头鹰-去猫头鹰": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6607,
+        "y": -60
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "根据提供点进行人物移动_Func",
+        "custom_action_param": [
+          {
+            "direction": "bottom",
+            "map_x_move_offset": 0,
+            "map_y_move_offset": -300,
+            "points": [
+              {
+                "x": 192,
+                "y": 163
+              },
+              {
+                "x": 190,
+                "y": 97
+              },
+              {
+                "x": 150,
+                "y": 29
+              },
+              {
+                "x": 117,
+                "y": 10
+              },
+              {
+                "x": 95,
+                "y": -23
+              },
+              {
+                "x": 123,
+                "y": -39
+              },
+              {
+                "x": 146,
+                "y": -48
+              },
+              {
+                "x": 181,
+                "y": -91
+              },
+              {
+                "x": 227,
+                "y": -142
+              }
+            ],
+            "template_img_name": "通道入口猫头鹰1.png"
+          },
+          {
+            "direction": "bottom",
+            "map_x_move_offset": 0,
+            "map_y_move_offset": -100,
+            "points": [
+              {
+                "x": 73,
+                "y": 132
+              },
+              {
+                "x": 94,
+                "y": 78
+              },
+              {
+                "x": 110,
+                "y": 61
+              },
+              {
+                "x": 103,
+                "y": 44
+              }
+            ],
+            "template_img_name": "通道入口猫头鹰2.png"
+          }
+        ]
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰-猫头鹰点击收取资源"
+    ],
+    "on_error": [
+      "[Anchor]重新开始"
+    ],
+    "post_delay": 600
+  },
+  "谷地通道猫头鹰-打开地图": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5180,
+        "y": -49
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "打开地图_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰-点击地区总览"
+    ]
+  },
+  "谷地通道猫头鹰-点击地区总览": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5465,
+        "y": -83
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "点击地区总览_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰-谷地通道大地图点击"
+    ]
+  },
+  "谷地通道猫头鹰-猫头鹰点击收取资源": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6908,
+        "y": -195
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "猫头鹰点击收取资源_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "on_error": [
+      "[Anchor]重新开始"
+    ],
+    "timeout": 4000
+  },
+  "谷地通道猫头鹰-谷地通道传送点点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6029,
+        "y": -39
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "谷地通道-通道入口传送点_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰_加载中界面判断"
+    ]
+  },
+  "谷地通道猫头鹰-谷地通道大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 5755,
+        "y": -48
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "谷地通道大地图点击_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰-谷地通道传送点点击"
+    ]
+  },
+  "谷地通道猫头鹰_加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 6319,
+        "y": -174
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "谷地通道猫头鹰-去猫头鹰"
+    ]
+  }
+}

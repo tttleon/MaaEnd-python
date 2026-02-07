@@ -1,0 +1,284 @@
+{
+  "$__mpe_anchor_重新判断是否加载完毕_新建Pipeline2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9193,
+        "y": 309
+      }
+    }
+  },
+  "$__mpe_config_新建Pipeline2": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\打开app.json",
+      "filename": "新建Pipeline2",
+      "lastSyncTime": 1770437667791,
+      "prefix": "",
+      "savedViewport": {
+        "x": -8619,
+        "y": 188,
+        "zoom": 0.92
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "打开app": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8324,
+        "y": 160
+      }
+    },
+    "action": {
+      "param": {
+        "package": "com.hypergryph.endfield"
+      },
+      "type": "StartApp"
+    },
+    "next": [
+      "打开app-黑屏判断"
+    ],
+    "timeout": 60000
+  },
+  "打开app-logo可点击界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9454,
+        "y": 61
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "打开app-黑屏判断_副本2"
+    ],
+    "post_delay": 3000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "明日方舟"
+        ],
+        "roi": [
+          378,
+          222,
+          133,
+          48
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "打开app-关闭游戏公告": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9192,
+        "y": -253
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "打开app-logo可点击界面"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "打开app-刚开始加载中界面": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8919,
+        "y": -155
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "打开app-适龄提示弹框确认",
+      "打开app-关闭游戏公告",
+      "打开app-logo可点击界面"
+    ],
+    "on_error": [
+      "[Anchor]重新判断是否加载完毕"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "适龄提示.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 2000
+  },
+  "打开app-月卡确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10422,
+        "y": -176
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "点击确认今日月卡奖励"
+        ],
+        "roi": [
+          551,
+          553,
+          178,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "打开app-适龄提示弹框确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9197,
+        "y": -526
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "打开app-logo可点击界面"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          590,
+          469,
+          94,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "打开app-黑屏判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 8677,
+        "y": 176
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "黑屏判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "anchor": [
+      "重新判断是否加载完毕"
+    ],
+    "next": [
+      "打开app-刚开始加载中界面"
+    ]
+  },
+  "打开app-黑屏判断_副本2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 9750,
+        "y": 65
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "黑屏判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "打开app_进入游戏加载中界面判断"
+    ]
+  },
+  "打开app_成功进入游戏": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10414,
+        "y": 481
+      }
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "探索"
+        ],
+        "roi": [
+          67,
+          12,
+          93,
+          45
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "打开app_进入游戏_关闭签到弹框": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10409,
+        "y": 156
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "打开app_进入游戏加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10003,
+        "y": 141
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "[JumpBack]打开app-月卡确认",
+      "[JumpBack]打开app_进入游戏_关闭签到弹框"
+    ],
+    "on_error": [
+      "打开app_成功进入游戏"
+    ],
+    "post_delay": 2000,
+    "timeout": 50000
+  }
+}

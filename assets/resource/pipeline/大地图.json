@@ -1,0 +1,148 @@
+{
+  "$__mpe_config_新建Pipeline11": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\大地图.json",
+      "filename": "新建Pipeline11",
+      "lastSyncTime": 1770080445425,
+      "prefix": "",
+      "savedViewport": {
+        "x": -1636,
+        "y": -6,
+        "zoom": 0.73
+      },
+      "version": "v1.0.2"
+    }
+  },
+  "是否成功枢纽区大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 3264,
+        "y": 716
+      }
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "地区总览"
+        ],
+        "roi": [
+          1026,
+          629,
+          93,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "枢纽区大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2663,
+        "y": 144
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          391,
+          403,
+          130,
+          87
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "是否成功枢纽区大地图点击"
+    ]
+  },
+  "源石研究院大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2666,
+        "y": 407
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          788,
+          335,
+          89,
+          59
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "是否成功枢纽区大地图点击"
+    ]
+  },
+  "矿脉源区大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2644,
+        "y": 1088
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          728,
+          184,
+          125,
+          81
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "是否成功枢纽区大地图点击"
+    ]
+  },
+  "谷地通道大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2663,
+        "y": 631
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          253,
+          226,
+          81,
+          63
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "是否成功枢纽区大地图点击"
+    ]
+  },
+  "阿伯莉采石场大地图点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 2658,
+        "y": 863
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          709,
+          578,
+          67,
+          63
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "是否成功枢纽区大地图点击"
+    ]
+  }
+}

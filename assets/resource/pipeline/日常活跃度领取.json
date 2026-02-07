@@ -1,0 +1,213 @@
+{
+  "$__mpe_config_新建Pipeline9": {
+    "$__mpe_code": {
+      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\日常活跃度领取.json",
+      "filename": "新建Pipeline9",
+      "lastSyncTime": 1770285263927,
+      "prefix": "",
+      "savedViewport": {
+        "x": -23451,
+        "y": -16,
+        "zoom": 1.27
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "日常活跃度领取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17450,
+        "y": 163
+      }
+    },
+    "next": [
+      "日常活跃度领取-行动手册打开"
+    ]
+  },
+  "日常活跃度领取-100分点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18466,
+        "y": 418
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          77,
+          183,
+          36,
+          40
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "日常活跃度领取-获得奖励"
+    ],
+    "pre_delay": 400
+  },
+  "日常活跃度领取-升级确认": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19468,
+        "y": 380
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "理智上限"
+        ],
+        "roi": [
+          591,
+          211,
+          95,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "日常活跃度领取-日常": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18099,
+        "y": 154
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[JumpBack]日常活跃度领取-领取",
+      "日常活跃度领取-100分点击"
+    ],
+    "post_delay": 1000,
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "日常"
+        ],
+        "roi": [
+          336,
+          95,
+          52,
+          39
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 5000
+  },
+  "日常活跃度领取-获得奖励": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18822,
+        "y": 406
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "日常活跃度领取-退出"
+    ],
+    "post_delay": 400,
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "获得奖励"
+        ],
+        "roi": [
+          590,
+          106,
+          110,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "日常活跃度领取-行动手册打开": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17781,
+        "y": 154
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          963,
+          26,
+          31,
+          28
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "日常活跃度领取-日常"
+    ]
+  },
+  "日常活跃度领取-退出": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19143,
+        "y": 385
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1213,
+          26,
+          16,
+          19
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "日常活跃度领取-升级确认"
+    ],
+    "timeout": 5000
+  },
+  "日常活跃度领取-领取": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18446,
+        "y": -108
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          1069,
+          186,
+          94,
+          442
+        ]
+      },
+      "type": "OCR"
+    },
+    "repeat_delay": 200
+  }
+}
