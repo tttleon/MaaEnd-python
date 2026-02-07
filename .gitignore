@@ -446,7 +446,7 @@ deps/tools/*
 !deps/tools/*.schema.json
 build
 install
-
+!deps/.keep
 # Tools
 tools/ImageCropper/**/*.png
 
