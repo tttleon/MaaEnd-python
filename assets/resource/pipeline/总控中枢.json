@@ -1,12 +1,4 @@
 {
-  "$__mpe_anchor_打开地图重新跑图_新建Pipeline11": {
-    "$__mpe_code": {
-      "position": {
-        "x": 17273,
-        "y": 808
-      }
-    }
-  },
   "$__mpe_anchor_重新检查黄点_新建Pipeline11": {
     "$__mpe_code": {
       "position": {
@@ -19,12 +11,13 @@
     "$__mpe_code": {
       "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\总控中枢.json",
       "filename": "新建Pipeline11",
-      "lastSyncTime": 1770425809657,
+      "isModifiedExternally": true,
+      "lastSyncTime": 1770475531937,
       "prefix": "",
       "savedViewport": {
-        "x": -13042,
-        "y": 85,
-        "zoom": 0.76
+        "x": -9307,
+        "y": 67,
+        "zoom": 0.57
       },
       "version": "v1.0.3"
     }
@@ -350,26 +343,33 @@
       "type": "OCR"
     }
   },
-  "总控中枢-是否到达": {
+  "总控中枢-点击到控制台": {
     "$__mpe_code": {
       "position": {
-        "x": 16981,
-        "y": 589
+        "x": 16754,
+        "y": 683
       }
     },
+    "action": {
+      "param": {
+        "target": [
+          347,
+          24,
+          22,
+          26
+        ]
+      },
+      "type": "Click"
+    },
     "next": [
-      "总控中枢-点击查看"
-    ],
-    "on_error": [
-      "[Anchor]打开地图重新跑图"
-    ],
-    "timeout": 2000
+      "总控中枢-点击成功"
+    ]
   },
   "总控中枢-点击成功": {
     "$__mpe_code": {
       "position": {
-        "x": 17484,
-        "y": 377
+        "x": 17338,
+        "y": 414
       }
     },
     "anchor": [
@@ -394,35 +394,6 @@
       "type": "OCR"
     },
     "timeout": 2000
-  },
-  "总控中枢-点击查看": {
-    "$__mpe_code": {
-      "position": {
-        "x": 17225,
-        "y": 377
-      }
-    },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "next": [
-      "总控中枢-点击成功"
-    ],
-    "recognition": {
-      "param": {
-        "expected": [
-          "查看"
-        ],
-        "roi": [
-          764,
-          385,
-          62,
-          106
-        ]
-      },
-      "type": "OCR"
-    }
   },
   "总控中枢-现在在不在帝江号上": {
     "$__mpe_code": {
@@ -464,58 +435,6 @@
       "type": "OCR"
     }
   },
-  "总控中枢-移动到控制台": {
-    "$__mpe_code": {
-      "position": {
-        "x": 16633,
-        "y": 693
-      }
-    },
-    "action": {
-      "param": {
-        "custom_action": "根据提供点进行人物移动_Func",
-        "custom_action_param": [
-          {
-            "direction": "bottom",
-            "black_arrow_need_resize": true,
-            "is_DJH": true,
-            "map_x_move_offset": 0,
-            "map_y_move_offset": 0,
-            "points": [
-              {
-                "x": 261,
-                "y": 50
-              },
-              {
-                "x": 199,
-                "y": 61
-              },
-              {
-                "x": 134,
-                "y": 60
-              },
-              {
-                "x": 115,
-                "y": 13
-              },
-              {
-                "x": 54,
-                "y": 2
-              }
-            ],
-            "template_img_name": "舰桥控制台.png"
-          }
-        ]
-      },
-      "type": "Custom"
-    },
-    "next": [
-      "总控中枢-是否到达"
-    ],
-    "on_error": [
-      "[Anchor]打开地图重新跑图"
-    ]
-  },
   "总控中枢-舰桥传送点传送": {
     "$__mpe_code": {
       "position": {
@@ -531,7 +450,7 @@
       "[JumpBack]总控中枢-加载中判断"
     ],
     "on_error": [
-      "总控中枢-移动到控制台"
+      "总控中枢-点击到控制台"
     ],
     "recognition": {
       "param": {
