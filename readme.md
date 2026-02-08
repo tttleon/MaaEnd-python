@@ -4,11 +4,15 @@
 视频介绍：[bilibili.com/video/BV1RxF4znEsU](bilibili.com/video/BV1RxF4znEsU)
 ## 亮点功能
 - 全自动协议空间，自动开始，自动战斗，自动结束战斗。
-- 自动跑图领取领取猫头鹰，到达控制中枢控制台
+- 自动跑图领取领取猫头鹰
+
+<img src="doc/动画111.gif" width="400" />
+<img src="doc/动画222.gif" width="400" />
+
 ## 目前已实现功能
 - 部分地区猫头鹰自动跑图领取
 - 打开app
-- 协议空间
+- 协议空间自动刷理智
 - 制作一个装备
 - 进行1次简易制作
 - 进行一次武器升级
@@ -270,4 +274,4 @@ class blackScreenCheckFunc(CustomAction):
         return False
 ```
 ### 交流群
-![img.png](img.png)
+<img src="doc/wx.png" width="300" />
