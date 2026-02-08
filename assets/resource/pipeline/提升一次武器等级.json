@@ -1,0 +1,444 @@
+{
+  "$__mpe_config_新建Pipeline3": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\提升一次武器等级.json",
+      "filename": "新建Pipeline3",
+      "lastSyncTime": 1770513586048,
+      "prefix": "",
+      "savedViewport": {
+        "x": -15791,
+        "y": -337,
+        "zoom": 0.87
+      },
+      "version": "v1.0.3"
+    }
+  },
+  "提升一次武器等级": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17091,
+        "y": 894
+      }
+    },
+    "next": [
+      "提升一次武器等级-顶部展开菜单点击"
+    ]
+  },
+  "提升一次武器等级-升级点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19553,
+        "y": 854
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-选择消耗素材"
+    ],
+    "pre_delay": 1500,
+    "recognition": {
+      "param": {
+        "expected": [
+          "升级"
+        ],
+        "roi": [
+          1135,
+          629,
+          56,
+          34
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-品质点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18402,
+        "y": 876
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-武器等级点击"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "品质"
+        ],
+        "roi": [
+          120,
+          631,
+          57,
+          34
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-武器等级提升": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21307,
+        "y": 699
+      }
+    },
+    "next": [
+      "提升一次武器等级-返回"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "等级提升"
+        ],
+        "roi": [
+          920,
+          60,
+          92,
+          32
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-武器等级点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18814,
+        "y": 886
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-详情点击"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "武器等级"
+        ],
+        "roi": [
+          110,
+          566,
+          102,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-武器绿票确认选中": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20593,
+        "y": 702
+      }
+    },
+    "next": [
+      "提升一次武器等级-点击升级"
+    ],
+    "on_error": [
+      "提升一次武器等级-没有绿票"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "武器检查单元"
+        ],
+        "roi": [
+          601,
+          106,
+          167,
+          44
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 5000
+  },
+  "提升一次武器等级-没有绿票": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20912,
+        "y": 1168
+      }
+    }
+  },
+  "提升一次武器等级-点击升级": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20922,
+        "y": 698
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-武器等级提升"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "升级"
+        ],
+        "roi": [
+          1094,
+          627,
+          58,
+          41
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-详情点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19183,
+        "y": 867
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-升级点击"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "详情"
+        ],
+        "roi": [
+          1132,
+          630,
+          50,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-贵重物品菜单点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17719,
+        "y": 877
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-降序点击"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "贵重物品.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "提升一次武器等级-返回": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21701,
+        "y": 685
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-返回2"
+    ],
+    "pre_delay": 1000,
+    "recognition": {
+      "param": {
+        "template": [
+          "返回箭头.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "提升一次武器等级-返回2": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22112,
+        "y": 697
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-退出贵重物品"
+    ],
+    "post_delay": 1000,
+    "pre_delay": 1000,
+    "recognition": {
+      "param": {
+        "template": [
+          "返回箭头.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "提升一次武器等级-退出贵重物品": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22503,
+        "y": 705
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "pre_delay": 1000,
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "提升一次武器等级-选择消耗素材": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19890,
+        "y": 835
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          63,
+          547,
+          48,
+          37
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-选择绿票"
+    ],
+    "pre_delay": 1500,
+    "recognition": {
+      "param": {
+        "expected": [
+          "消耗素材"
+        ],
+        "roi": [
+          27,
+          474,
+          86,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-选择绿票": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20237,
+        "y": 837
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-武器绿票确认选中"
+    ],
+    "on_error": [
+      "提升一次武器等级-没有绿票"
+    ],
+    "pre_delay": 1000,
+    "recognition": {
+      "param": {
+        "template": [
+          "武器绿票.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 5000
+  },
+  "提升一次武器等级-降序点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18060,
+        "y": 876
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-品质点击"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "降序"
+        ],
+        "roi": [
+          295,
+          631,
+          56,
+          32
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "提升一次武器等级-顶部展开菜单点击": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17369,
+        "y": 892
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          788,
+          20,
+          21,
+          27
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "提升一次武器等级-贵重物品菜单点击"
+    ]
+  }
+}
