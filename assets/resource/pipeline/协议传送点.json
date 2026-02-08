@@ -1,14 +1,14 @@
 {
   "$__mpe_config_新建Pipeline8": {
     "$__mpe_code": {
-      "filePath": "E:\\codeTemp\\endMaa-python\\assets\\resource\\pipeline\\协议传送点.json",
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\协议传送点.json",
       "filename": "新建Pipeline8",
-      "lastSyncTime": 1770361671702,
+      "lastSyncTime": 1770514186579,
       "prefix": "",
       "savedViewport": {
-        "x": -3393,
-        "y": -317,
-        "zoom": 1
+        "x": -2489,
+        "y": -236,
+        "zoom": 0.87
       },
       "version": "v1.0.3"
     }
@@ -118,8 +118,8 @@
   "枢纽区-工人之家传送点": {
     "$__mpe_code": {
       "position": {
-        "x": 3293,
-        "y": 792
+        "x": 3123,
+        "y": 783
       }
     },
     "next": [
@@ -147,8 +147,8 @@
   "枢纽区-工人之家传送点-地图比例缩到最小_comp": {
     "$__mpe_code": {
       "position": {
-        "x": 3616,
-        "y": 761
+        "x": 3493,
+        "y": 759
       }
     },
     "action": {
@@ -190,10 +190,10 @@
     "action": {
       "param": {
         "target": [
-          803,
+          804,
           453,
-          15,
-          21
+          18,
+          18
         ]
       },
       "type": "Click"

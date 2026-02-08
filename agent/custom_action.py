@@ -526,6 +526,13 @@ class WalkByPointsReco(CustomAction):
     # 定义一个中文别名
     ACTION_NAME = "根据提供点进行人物移动_Func"
 
+    map_center_x = int(1280 / 2)
+    map_center_y = int(720 / 2)
+    rotate_start_x = map_center_x + 100
+    # 前进摇杆点位
+    w_x = 192
+    w_y = 441
+
     def __init__(self):
         super().__init__()
         self.context = None
@@ -540,12 +547,6 @@ class WalkByPointsReco(CustomAction):
 
         self.context = context
 
-        map_center_x = int(1280 / 2)
-        map_center_y = int(720 / 2)
-        rotate_start_x = map_center_x + 100
-        # 前进摇杆点位
-        w_x = 192
-        w_y = 441
         print('WalkByPointsReco')
         for task in custom_action_param:
             # 模版图片名称
@@ -567,7 +568,7 @@ class WalkByPointsReco(CustomAction):
                 # 直接行走，不做任何计算
                 if 'direct_walk' in target_point:
                     action_param = JLongPress(
-                        target=(w_x, w_y, 0, 0),
+                        target=(self.w_x, self.w_y, 0, 0),
                         duration=target_point["direct_walk"],
                     )
                     context.run_action_direct(JActionType.LongPress, action_param)
@@ -579,33 +580,13 @@ class WalkByPointsReco(CustomAction):
                 if "map_y_move_offset" in target_point:
                     map_y_move_offset = target_point["map_y_move_offset"]  # 范围+-600
 
-                self._open_map(is_DJH)
+                # 打开地图
+                self._open_map(is_DJH,map_x_move_offset,map_y_move_offset)
 
-                # 滑动移动地图使箭头在合适的位置
-                if map_x_move_offset != 0:
-                    swipe_param = JSwipe(
-                        begin=(map_center_x, map_center_y, 0, 0),  # 覆盖 JTarget (假设 JTarget 接受元组)
-                        duration=[500],  # 注意这里是 List[int]
-                        end=[(map_center_x + map_x_move_offset, map_center_y, 0, 0)],  # 注意这里是 List[JTarget]
-                    )
-                    context.run_action_direct(JActionType.Swipe, swipe_param)
-                if map_y_move_offset != 0:
-                    if map_y_move_offset > 0:
-                        map_start_y = 10
-                    else:
-                        map_start_y = 600
-
-                    swipe_param = JSwipe(
-                        begin=(10, map_start_y, 0, 0),  # 覆盖 JTarget (假设 JTarget 接受元组)
-                        duration=[500],  # 注意这里是 List[int]
-                        end=[(10, map_start_y + map_y_move_offset, 0, 0)],  # 注意这里是 List[JTarget]
-                    )
-                    context.run_action_direct(JActionType.Swipe, swipe_param)
 
                 # 先使用 YOLO 检测箭头在图片中的位置
                 screen_cap = controller.post_screencap().wait().get()
-                # 退出地图
-                context.run_action("点击右上角叉叉")
+
                 recognition_config = JCustomRecognition(
                     custom_recognition="YOLODet_cust",
                     custom_recognition_param={"model": "arrow-nms.onnx"}
@@ -647,77 +628,64 @@ class WalkByPointsReco(CustomAction):
                     # 有上一个点，计算和上一个点之间的距离
                     to_last_distance = math.sqrt((relative_x - last_time_point["x"]) ** 2 + (relative_y - last_time_point["y"]) ** 2)
                     print(f"和上一个点之间的距离: {to_last_distance}")
+                    last_time_point = target_point
                     # 没有到达点位附近，失败，重头开始跑吧
                     if to_last_distance > 20:
-                        time.sleep(2)
+                        # 退出地图
+                        context.run_action("点击右上角叉叉")
+                        time.sleep(3)
                         return False
-                    last_time_point = target_point
 
 
+                # 移动地图使得箭头被黑圈圈包围，方便后续方向计算
+                if black_arrow_need_resize:
+                    # 帝江号纯移动地图没法变成黑圈，要先放大地图到最大
+                    context.run_action("放大地图到最大")
 
-                # 再次截图，开始算箭头角度
-                is_get_angle = False
-                false_count = 0
-                while not is_get_angle and false_count < 3:
-                    print(f"第{false_count}次计算自身角度")
-                    self._open_map(is_DJH)
-                    # 移动地图使得箭头被黑圈圈包围，方便后续方向计算
-                    if black_arrow_need_resize:
-                        # 帝江号纯移动地图没法变成黑圈，要先放大地图到最大
-                        context.run_action("放大地图到最大")
+                if direction == 'top':
+                    y_start = 720 - 10
+                    y_end = y_start - 500
+                else:
+                    # 你妈的怎么还把手机状态栏给滑下来了
+                    y_start = 0 + 60
+                    y_end = y_start + 500
+                # 移动地图使得箭头在地图边缘被黑圈包围
+                action_param = JSwipe(
+                    begin=(10, y_start, 0, 0),
+                    duration=[700],
+                    end=[(10, y_end, 0, 0)],
+                )
+                print("移动地图使得箭头在地图边缘被黑圈包围")
+                context.run_action_direct(JActionType.Swipe, action_param)
+                context.run_action_direct(JActionType.Swipe, action_param)
 
-                    if direction == 'top':
-                        y_start = 720 - 10
-                        y_end = y_start - 500
-                    else:
-                        # 你妈的怎么还把手机状态栏给滑下来了
-                        y_start = 0 + 60
-                        y_end = y_start + 500
-                    # 移动地图使得箭头在地图边缘被黑圈包围
-                    action_param = JSwipe(
-                        begin=(10, y_start, 0, 0),
-                        duration=[500],
-                        end=[(10, y_end, 0, 0)],
-                    )
-                    context.run_action_direct(JActionType.Swipe, action_param)
-                    context.run_action_direct(JActionType.Swipe, action_param)
-
-                    screen_cap = controller.post_screencap().wait().get()
-                    # 退出地图
-                    context.run_action("点击右上角叉叉")
-                    # 切出箭头图标 上滑，下滑y值是固定的，x值通过yolo检测结果box的中心来确定
-                    if direction == 'top':
-                        y = 121
-                    elif direction == 'bottom':
-                        y = 563
-                    else:
-                        raise ValueError("direction must be 'top' or 'bottom'")
-                    x = box[0]
-                    w = box[2]
-                    h = box[3] + 10
-                    cut_arrow = screen_cap[y:y + h, x:x + w]
-                    # cv2.imwrite("cut_arrow.png",cut_arrow)
-                    # 灰度二值图
-                    gray = cv2.cvtColor(cut_arrow, cv2.COLOR_BGR2GRAY)
-                    _, thresh = cv2.threshold(gray, 185, 255, cv2.THRESH_BINARY)
-                    # 计算自身角度
-                    arrow_angle = get_angle_and_bisector(thresh)
-                    # 计算自身角度失败，重试
-                    if arrow_angle is False:
-                        false_count += 1
-                        print(f"第{false_count}次计算自身角度失败，重试")
-                        continue
-                    else:
-                        # 计算自身角度成功，跳出循环
-                        is_get_angle = True
-                        break
-
-                if not is_get_angle:
-                    print("三次重新检测都没有获取到角度，无法继续处理了")
-                    return False
-
+                # 再次截图
+                screen_cap = controller.post_screencap().wait().get()
                 # 退出地图
                 context.run_action("点击右上角叉叉")
+
+                # 切出箭头图标 上滑，下滑y值是固定的，x值通过yolo检测结果box的中心来确定
+                if direction == 'top':
+                    y = 121
+                elif direction == 'bottom':
+                    y = 563
+                else:
+                    raise ValueError("direction must be 'top' or 'bottom'")
+                x = box[0]
+                w = box[2]
+                h = box[3] + 10
+                cut_arrow = screen_cap[y:y + h, x:x + w]
+                # cv2.imwrite("cut_arrow.png",cut_arrow)
+                # 灰度二值图
+                gray = cv2.cvtColor(cut_arrow, cv2.COLOR_BGR2GRAY)
+                _, thresh = cv2.threshold(gray, 185, 255, cv2.THRESH_BINARY)
+                # 计算自身角度
+                arrow_angle = get_angle_and_bisector(thresh)
+                # 计算自身角度失败，重试
+                if arrow_angle is False:
+                    return False
+
+
                 # 计算到目标点需要旋转的角度
                 target_x = target_point['x']
                 target_y = target_point['y']
@@ -729,9 +697,9 @@ class WalkByPointsReco(CustomAction):
 
                 # 转起来!
                 action_param = JSwipe(
-                    begin=(rotate_start_x, map_center_y, 0, 0),
+                    begin=(self.rotate_start_x, self.map_center_y, 0, 0),
                     duration=[500],
-                    end=[(rotate_start_x + rotate_pix, map_center_y, 0, 0)],
+                    end=[(self.rotate_start_x + rotate_pix, self.map_center_y, 0, 0)],
                 )
                 context.run_action_direct(JActionType.Swipe, action_param)
                 # 计算到目标点的像素距离
@@ -743,20 +711,39 @@ class WalkByPointsReco(CustomAction):
                 print(f'move_time={move_time}')
 
                 # 走起!
-                w_x = 192
-                w_y = 441
                 action_param = JLongPress(
-                    target=(w_x, w_y, 0, 0),
+                    target=(self.w_x, self.w_y, 0, 0),
                     duration=move_time,
                 )
                 context.run_action_direct(JActionType.LongPress, action_param)
 
         return True
 
-    def _open_map(self, is_DJH: bool):
+    def _open_map(self, is_DJH: bool,map_x_move_offset=0,map_y_move_offset=0):
         if is_DJH:
             self.context.run_task("帝江号上打开地图")
         else:
             self.context.run_task("打开地图")
         # 放大地图
         self.context.run_action("放大地图")
+
+        # 滑动移动地图使箭头在合适的位置
+        if map_x_move_offset != 0:
+            swipe_param = JSwipe(
+                begin=(self.map_center_x, self.map_center_y, 0, 0),  # 覆盖 JTarget (假设 JTarget 接受元组)
+                duration=[500],  # 注意这里是 List[int]
+                end=[(self.map_center_x + map_x_move_offset, self.map_center_y, 0, 0)],  # 注意这里是 List[JTarget]
+            )
+            self.context.run_action_direct(JActionType.Swipe, swipe_param)
+        if map_y_move_offset != 0:
+            if map_y_move_offset > 0:
+                map_start_y = 10
+            else:
+                map_start_y = 600
+
+            swipe_param = JSwipe(
+                begin=(10, map_start_y, 0, 0),  # 覆盖 JTarget (假设 JTarget 接受元组)
+                duration=[500],  # 注意这里是 List[int]
+                end=[(10, map_start_y + map_y_move_offset, 0, 0)],  # 注意这里是 List[JTarget]
+            )
+            self.context.run_action_direct(JActionType.Swipe, swipe_param)
