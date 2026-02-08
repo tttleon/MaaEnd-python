@@ -11,12 +11,12 @@
     "$__mpe_code": {
       "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\打开app.json",
       "filename": "新建Pipeline2",
-      "lastSyncTime": 1770437667791,
+      "lastSyncTime": 1770511392803,
       "prefix": "",
       "savedViewport": {
-        "x": -8619,
-        "y": 188,
-        "zoom": 0.92
+        "x": -9458,
+        "y": 250,
+        "zoom": 1
       },
       "version": "v1.0.3"
     }
@@ -222,6 +222,7 @@
         "y": 481
       }
     },
+    "post_delay": 3000,
     "recognition": {
       "param": {
         "expected": [
@@ -273,12 +274,10 @@
     },
     "next": [
       "[JumpBack]打开app-月卡确认",
-      "[JumpBack]打开app_进入游戏_关闭签到弹框"
-    ],
-    "on_error": [
+      "[JumpBack]打开app_进入游戏_关闭签到弹框",
       "打开app_成功进入游戏"
     ],
     "post_delay": 2000,
-    "timeout": 50000
+    "timeout": -1
   }
 }
