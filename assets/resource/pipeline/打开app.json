@@ -1,5 +1,5 @@
 {
-  "$__mpe_anchor_重新判断是否加载完毕_新建Pipeline2": {
+  "$__mpe_anchor_重新判断是否加载完毕_新建Pipeline3": {
     "$__mpe_code": {
       "position": {
         "x": 9193,
@@ -7,16 +7,16 @@
       }
     }
   },
-  "$__mpe_config_新建Pipeline2": {
+  "$__mpe_config_新建Pipeline3": {
     "$__mpe_code": {
-      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\打开app.json",
-      "filename": "新建Pipeline2",
-      "lastSyncTime": 1770511392803,
+      "filePath": "E:\\codeTemp\\MaaEnd-python\\assets\\resource\\pipeline\\打开app.json",
+      "filename": "新建Pipeline3",
+      "lastSyncTime": 1770599715767,
       "prefix": "",
       "savedViewport": {
-        "x": -9458,
-        "y": 250,
-        "zoom": 1
+        "x": -7092,
+        "y": 572,
+        "zoom": 0.86
       },
       "version": "v1.0.3"
     }
@@ -72,17 +72,14 @@
   "打开app-关闭游戏公告": {
     "$__mpe_code": {
       "position": {
-        "x": 9192,
-        "y": -253
+        "x": 9247,
+        "y": -247
       }
     },
     "action": {
       "param": {},
       "type": "Click"
     },
-    "next": [
-      "打开app-logo可点击界面"
-    ],
     "recognition": {
       "param": {
         "template": [
@@ -104,8 +101,8 @@
       "type": "Click"
     },
     "next": [
-      "打开app-适龄提示弹框确认",
-      "打开app-关闭游戏公告",
+      "[JumpBack]打开app-适龄提示弹框确认",
+      "[JumpBack]打开app-关闭游戏公告",
       "打开app-logo可点击界面"
     ],
     "on_error": [
@@ -119,7 +116,7 @@
       },
       "type": "TemplateMatch"
     },
-    "timeout": 2000
+    "timeout": 3000
   },
   "打开app-月卡确认": {
     "$__mpe_code": {
@@ -158,9 +155,6 @@
       "param": {},
       "type": "Click"
     },
-    "next": [
-      "打开app-logo可点击界面"
-    ],
     "recognition": {
       "param": {
         "expected": [
