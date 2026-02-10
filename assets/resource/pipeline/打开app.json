@@ -11,12 +11,12 @@
     "$__mpe_code": {
       "filePath": "E:\\codeTemp\\MaaEnd-python\\assets\\resource\\pipeline\\打开app.json",
       "filename": "新建Pipeline3",
-      "lastSyncTime": 1770599715767,
+      "lastSyncTime": 1770685033407,
       "prefix": "",
       "savedViewport": {
-        "x": -7092,
-        "y": 572,
-        "zoom": 0.86
+        "x": -9298,
+        "y": 289,
+        "zoom": 1
       },
       "version": "v1.0.3"
     }
@@ -247,6 +247,9 @@
       "param": {
         "template": [
           "close.png"
+        ],
+        "threshold": [
+          0.9
         ]
       },
       "type": "TemplateMatch"
@@ -255,7 +258,7 @@
   "打开app_进入游戏加载中界面判断": {
     "$__mpe_code": {
       "position": {
-        "x": 10003,
+        "x": 10004,
         "y": 141
       }
     },
