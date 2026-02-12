@@ -220,7 +220,8 @@
     "recognition": {
       "param": {
         "expected": [
-          "探索"
+          "探索",
+          "工业"
         ],
         "roi": [
           67,
