@@ -274,4 +274,4 @@ class blackScreenCheckFunc(CustomAction):
         return False
 ```
 ### 交流群
-<img src="doc/wx.png" width="300" />
+<img src="https://s41.ax1x.com/2026/02/13/pZqeSlF.png" width="400" />
