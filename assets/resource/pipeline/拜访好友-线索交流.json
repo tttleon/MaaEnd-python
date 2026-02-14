@@ -1,0 +1,472 @@
+{
+  "$__mpe_anchor_重新检查是否有线索交流开启1_新建Pipeline6": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19776,
+        "y": 1017
+      }
+    }
+  },
+  "$__mpe_anchor_重新检查是否有线索交流开启2_新建Pipeline6": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21619,
+        "y": 782
+      }
+    }
+  },
+  "$__mpe_config_新建Pipeline6": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\拜访好友-生产助力.json",
+      "filename": "新建Pipeline6",
+      "lastSyncTime": 1771071421756,
+      "prefix": "",
+      "savedViewport": {
+        "x": -12296,
+        "y": -113,
+        "zoom": 0.66
+      },
+      "version": "v1.1.2"
+    }
+  },
+  "拜访好友-close": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20776,
+        "y": 503
+      }
+    },
+    "next": [
+      "拜访好友-结束拜访"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "拜访好友-列表准备开始": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18996,
+        "y": 612
+      }
+    },
+    "anchor": [
+      "重新检查是否有线索交流开启1",
+      "重新检查是否有线索交流开启2"
+    ],
+    "next": [
+      "拜访好友-找开了线索交流的"
+    ],
+    "on_error": [
+      "拜访好友-检查是否列表已经滑动到了底部",
+      "拜访好友-列表滑动"
+    ],
+    "timeout": 2000
+  },
+  "拜访好友-列表滑动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19342,
+        "y": 993
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          553,
+          581,
+          24,
+          14
+        ],
+        "duration": [
+          1800
+        ],
+        "end": [
+          [
+            559,
+            170,
+            19,
+            13
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "[Anchor]重新检查是否有线索交流开启1"
+    ],
+    "post_delay": 1000
+  },
+  "拜访好友-开始": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18143,
+        "y": 588
+      }
+    },
+    "next": [
+      "拜访好友-点击左上角打开菜单"
+    ]
+  },
+  "拜访好友-打开访客终端": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20266,
+        "y": 336
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[JumpBack]拜访好友-生产和情报"
+    ],
+    "on_error": [
+      "拜访好友-close"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "打开访客终端"
+        ],
+        "roi": [
+          47,
+          277,
+          112,
+          33
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 4000
+  },
+  "拜访好友-找开了线索交流的": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19275,
+        "y": 359
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-确定"
+    ],
+    "recognition": {
+      "param": {
+        "template": [
+          "开启了线索交流.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "拜访好友-检查剩余情报交流次数": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21396,
+        "y": 452
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-结束"
+    ],
+    "on_error": [
+      "[Anchor]重新检查是否有线索交流开启2"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "0/5"
+        ],
+        "roi": [
+          1140,
+          91,
+          30,
+          20
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 3000
+  },
+  "拜访好友-检查是否列表已经滑动到了底部": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19311,
+        "y": 714
+      }
+    },
+    "next": [
+      "拜访好友-结束"
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            231,
+            230,
+            230
+          ]
+        ],
+        "roi": [
+          1256,
+          597,
+          1,
+          5
+        ],
+        "upper": [
+          [
+            231,
+            230,
+            230
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "拜访好友-点击好友": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18733,
+        "y": 538
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-列表准备开始"
+    ],
+    "pre_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "好友"
+        ],
+        "roi": [
+          1190,
+          274,
+          45,
+          24
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友-点击左上角打开菜单": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18483,
+        "y": 577
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1211,
+          13,
+          41,
+          44
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-点击好友"
+    ]
+  },
+  "拜访好友-生产和情报": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20733,
+        "y": 147
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "生产助力",
+          "情报交流"
+        ],
+        "roi": [
+          41,
+          625,
+          1166,
+          57
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友-确定": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19672,
+        "y": 344
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友_加载中界面判断"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          803,
+          476,
+          59,
+          33
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友-确认结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22283,
+        "y": 910
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友_结束拜访加载中界面判断"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          806,
+          474,
+          53,
+          36
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友-结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21879,
+        "y": 903
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-确认结束"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "结束拜访"
+        ],
+        "roi": [
+          1095,
+          627,
+          94,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友-结束拜访": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21084,
+        "y": 511
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "拜访好友-检查剩余情报交流次数"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "结束拜访"
+        ],
+        "roi": [
+          769,
+          406,
+          98,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "拜访好友_加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19987,
+        "y": 337
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    },
+    "next": [
+      "拜访好友-打开访客终端"
+    ]
+  },
+  "拜访好友_结束拜访加载中界面判断": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22653,
+        "y": 908
+      }
+    },
+    "action": {
+      "param": {
+        "custom_action": "加载中界面判断_comp",
+        "custom_action_param": ""
+      },
+      "type": "Custom"
+    }
+  }
+}
