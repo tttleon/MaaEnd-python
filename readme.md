@@ -48,9 +48,9 @@ python 3.10
 pip install -r requirements.txt
 ```
 ## 安装MaaFramework发布包
-MAA-win-x86_64-v5.5.0.zip,解压后放到deps目录直接覆盖掉。
+MAA-win-x86_64-v5.6.0.zip,解压后放到deps目录直接覆盖掉。
 
-[MaaFramework发布包v5.5.0下载](https://github.com/MaaXYZ/MaaFramework/releases/tag/v5.5.0)
+[MaaFramework发布包v5.6.0下载](https://github.com/MaaXYZ/MaaFramework/releases/tag/v5.6.0)
 ## 下载需要的模型，放到assets/resource目录下
 通过网盘分享的文件：model
 
@@ -137,7 +137,7 @@ task_entry = [
 
 ## 可视化编辑器，编辑任务流程
 ### 使用
-[可视化编辑器MaaPipelineEditor](https://endmaa.github.io/endMaa-python-editor/)
+[可视化编辑器MaaPipelineEditor](https://github.com/kqcoxn/MaaPipelineEditor/releases)
 
 - 下载release之后，将mpelb.exe放到assets/resource目录下
 - 运行mpelb.exe。打开[可视化编辑器在线网站](https://mpe.codax.site/stable/)
