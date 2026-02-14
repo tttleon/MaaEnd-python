@@ -1,0 +1,476 @@
+{
+  "$__mpe_anchor_准备购买1_新建Pipeline7": {
+    "$__mpe_code": {
+      "position": {
+        "x": 23703,
+        "y": 739
+      }
+    }
+  },
+  "$__mpe_anchor_准备购买2_新建Pipeline7": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22298,
+        "y": 783
+      }
+    }
+  },
+  "$__mpe_config_新建Pipeline7": {
+    "$__mpe_code": {
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\收取信用优先买红玉.json",
+      "filename": "新建Pipeline7",
+      "lastSyncTime": 1771067122641,
+      "prefix": "",
+      "savedViewport": {
+        "x": -10008,
+        "y": -53,
+        "zoom": 0.5
+      },
+      "version": "v1.1.2"
+    }
+  },
+  "收取信用优先买红玉-买其他东西": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21572,
+        "y": 1131
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认购买"
+    ],
+    "on_error": [
+      "收取信用优先买红玉-信用不足结束"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          11,
+          240,
+          1229,
+          326
+        ],
+        "template": [
+          "采购中心f.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 3000
+  },
+  "收取信用优先买红玉-信用不足结束": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22013,
+        "y": 1359
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1182,
+          72,
+          23,
+          20
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-退出"
+    ]
+  },
+  "收取信用优先买红玉-准备购买": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21019,
+        "y": 605
+      }
+    },
+    "anchor": [
+      "准备购买1",
+      "准备购买2"
+    ],
+    "next": [
+      "收取信用优先买红玉-列表向上滚动"
+    ]
+  },
+  "收取信用优先买红玉-列表向上滚动": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21319,
+        "y": 591
+      }
+    },
+    "action": {
+      "param": {
+        "begin": [
+          693,
+          609,
+          24,
+          14
+        ],
+        "end": [
+          [
+            664,
+            119,
+            27,
+            21
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "收取信用优先买红玉-搜寻嵌晶玉",
+      "收取信用优先买红玉-刷新一次",
+      "收取信用优先买红玉-买其他东西"
+    ],
+    "timeout": 4000
+  },
+  "收取信用优先买红玉-刷新一次": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21573,
+        "y": 772
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认刷新"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "4/4"
+        ],
+        "roi": [
+          945,
+          630,
+          119,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-搜寻嵌晶玉": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21562,
+        "y": 374
+      }
+    },
+    "action": {
+      "param": {
+        "target_offset": [
+          2,
+          -105,
+          -11,
+          24
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认购买"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "嵌晶玉"
+        ],
+        "roi": [
+          33,
+          314,
+          1216,
+          295
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-收取信用": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20383,
+        "y": 422
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-获得奖励"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "收取信用"
+        ],
+        "roi": [
+          58,
+          637,
+          92,
+          29
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-无待领取信用": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20403,
+        "y": 732
+      }
+    },
+    "next": [
+      "收取信用优先买红玉-准备购买"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "无待领取信用"
+        ],
+        "roi": [
+          66,
+          632,
+          128,
+          34
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-点击信用交易所": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20043,
+        "y": 579
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-收取信用",
+      "收取信用优先买红玉-无待领取信用"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "信用交易所"
+        ],
+        "roi": [
+          1085,
+          68,
+          110,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-点击采购中心": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19721,
+        "y": 594
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          783,
+          19,
+          30,
+          27
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-点击信用交易所"
+    ]
+  },
+  "收取信用优先买红玉-确认刷新": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21966,
+        "y": 773
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[Anchor]准备购买2"
+    ],
+    "post_delay": 1500,
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          801,
+          469,
+          61,
+          40
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-确认购买": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22922,
+        "y": 718
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-购买成功"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确认购买"
+        ],
+        "roi": [
+          1065,
+          616,
+          94,
+          35
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-获得奖励": {
+    "$__mpe_code": {
+      "position": {
+        "x": 20751,
+        "y": 417
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-准备购买"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "获得奖励"
+        ],
+        "roi": [
+          597,
+          107,
+          92,
+          31
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-购买成功": {
+    "$__mpe_code": {
+      "position": {
+        "x": 23300,
+        "y": 706
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "[Anchor]准备购买1"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "购买成功"
+        ],
+        "roi": [
+          597,
+          107,
+          92,
+          31
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-退出": {
+    "$__mpe_code": {
+      "position": {
+        "x": 22333,
+        "y": 1332
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "recognition": {
+      "param": {
+        "template": [
+          "close.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "收取信用优先买红玉-顶部菜单展开": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19439,
+        "y": 598
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          788,
+          24,
+          19,
+          21
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-点击采购中心"
+    ]
+  },
+  "收取信用优先买红玉开始": {
+    "$__mpe_code": {
+      "position": {
+        "x": 19179,
+        "y": 598
+      }
+    },
+    "next": [
+      "收取信用优先买红玉-顶部菜单展开"
+    ]
+  }
+}
