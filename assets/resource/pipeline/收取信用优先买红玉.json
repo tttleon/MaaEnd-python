@@ -1,5 +1,5 @@
 {
-  "$__mpe_anchor_准备购买1_新建Pipeline7": {
+  "$__mpe_anchor_准备购买1_新建Pipeline2": {
     "$__mpe_code": {
       "position": {
         "x": 23703,
@@ -7,7 +7,7 @@
       }
     }
   },
-  "$__mpe_anchor_准备购买2_新建Pipeline7": {
+  "$__mpe_anchor_准备购买2_新建Pipeline2": {
     "$__mpe_code": {
       "position": {
         "x": 22298,
@@ -15,16 +15,16 @@
       }
     }
   },
-  "$__mpe_config_新建Pipeline7": {
+  "$__mpe_config_新建Pipeline2": {
     "$__mpe_code": {
-      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\收取信用优先买红玉.json",
-      "filename": "新建Pipeline7",
-      "lastSyncTime": 1771067122641,
+      "filePath": "C:\\Users\\leon\\code_temp\\MaaEnd-python\\assets\\resource\\pipeline\\收取信用优先买红玉.json",
+      "filename": "新建Pipeline2",
+      "lastSyncTime": 1771332484779,
       "prefix": "",
       "savedViewport": {
-        "x": -10008,
-        "y": -53,
-        "zoom": 0.5
+        "x": -15995,
+        "y": -471,
+        "zoom": 0.76
       },
       "version": "v1.1.2"
     }
@@ -32,8 +32,8 @@
   "收取信用优先买红玉-买其他东西": {
     "$__mpe_code": {
       "position": {
-        "x": 21572,
-        "y": 1131
+        "x": 21542,
+        "y": 1247
       }
     },
     "action": {
@@ -56,6 +56,9 @@
         ],
         "template": [
           "采购中心f.png"
+        ],
+        "threshold": [
+          0.9
         ]
       },
       "type": "TemplateMatch"
@@ -128,19 +131,63 @@
     "next": [
       "收取信用优先买红玉-搜寻嵌晶玉",
       "收取信用优先买红玉-刷新一次",
+      "收取信用优先买红玉-刷新2次",
       "收取信用优先买红玉-买其他东西"
     ],
     "timeout": 4000
   },
-  "收取信用优先买红玉-刷新一次": {
+  "收取信用优先买红玉-刷新2次": {
     "$__mpe_code": {
       "position": {
-        "x": 21573,
-        "y": 772
+        "x": 21608,
+        "y": 995
       }
     },
     "action": {
-      "param": {},
+      "param": {
+        "target": [
+          1083,
+          640,
+          68,
+          18
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认刷新"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "3/4"
+        ],
+        "roi": [
+          945,
+          630,
+          119,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-刷新一次": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21601,
+        "y": 743
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1083,
+          640,
+          68,
+          18
+        ]
+      },
       "type": "Click"
     },
     "next": [
