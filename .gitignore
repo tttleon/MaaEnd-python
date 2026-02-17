@@ -456,3 +456,4 @@ test
 test_2
 assets/resource/model
 deps/tools
+.nicegui
