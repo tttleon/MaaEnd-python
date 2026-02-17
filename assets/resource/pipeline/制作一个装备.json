@@ -1,16 +1,16 @@
 {
   "$__mpe_config_新建Pipeline6": {
     "$__mpe_code": {
-      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\制作一个装备.json",
+      "filePath": "C:\\Users\\leon\\code_temp\\MaaEnd-python\\assets\\resource\\pipeline\\制作一个装备.json",
       "filename": "新建Pipeline6",
-      "lastSyncTime": 1770210575646,
+      "lastSyncTime": 1771330735743,
       "prefix": "",
       "savedViewport": {
-        "x": -13398,
-        "y": 288,
-        "zoom": 0.92
+        "x": -12364,
+        "y": 2,
+        "zoom": 0.87
       },
-      "version": "v1.0.3"
+      "version": "v1.1.2"
     }
   },
   "制作一个装备": {
@@ -104,21 +104,6 @@
       "type": "OCR"
     }
   },
-  "制作一个装备-是否滑动到最底下": {
-    "$__mpe_code": {
-      "position": {
-        "x": 14321,
-        "y": 105
-      }
-    },
-    "next": [
-      "制作一个装备-绿色装备"
-    ],
-    "on_error": [
-      "制作一个装备-装备制造页面"
-    ],
-    "timeout": 2000
-  },
   "制作一个装备-材料不足（不制作）": {
     "$__mpe_code": {
       "position": {
@@ -187,7 +172,7 @@
       "type": "Click"
     },
     "next": [
-      "制作一个装备-装备制造页面"
+      "制作一个装备-降序"
     ],
     "recognition": {
       "param": {
@@ -207,8 +192,8 @@
   "制作一个装备-绿色装备": {
     "$__mpe_code": {
       "position": {
-        "x": 14715,
-        "y": 153
+        "x": 14568,
+        "y": 211
       }
     },
     "next": [
@@ -220,48 +205,10 @@
           "集成重型装备组"
         ],
         "roi": [
-          85,
-          299,
-          151,
-          35
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "制作一个装备-装备制造页面": {
-    "$__mpe_code": {
-      "position": {
-        "x": 13939,
-        "y": 327
-      }
-    },
-    "action": {
-      "param": {
-        "duration": 1000,
-        "target": [
-          436,
-          595,
-          3,
-          5
-        ]
-      },
-      "type": "LongPress"
-    },
-    "next": [
-      "制作一个装备-是否滑动到最底下"
-    ],
-    "pre_delay": 400,
-    "recognition": {
-      "param": {
-        "expected": [
-          "套组装备制造"
-        ],
-        "roi": [
-          103,
-          16,
-          141,
-          36
+          84,
+          77,
+          161,
+          43
         ]
       },
       "type": "OCR"
@@ -342,6 +289,36 @@
           107,
           17,
           139,
+          37
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "制作一个装备-降序": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13991,
+        "y": 324
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "制作一个装备-绿色装备"
+    ],
+    "pre_delay": 400,
+    "recognition": {
+      "param": {
+        "expected": [
+          "降序"
+        ],
+        "roi": [
+          270,
+          617,
+          45,
           37
         ]
       },
