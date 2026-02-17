@@ -522,6 +522,154 @@ class FightReco(CustomAction):
             print(f"发生了其他未知的错误: {e}")
             return False
 
+class Fight42Sister(CustomAction):
+    ACTION_NAME = "42姐火队战斗_Func"
+
+    def run(
+            self,
+            context: Context,
+            argv: CustomAction.RunArg,
+    ) -> bool:
+        try:
+            controller = context.tasker.controller
+            dict = {"stop_flag": False , "screen_cap":None}
+
+            # --- 攻击 长按线程 ---
+            def long_press_worker():
+                fight_btn_param = JLongPress(target=(1029, 527, 54, 54), duration=4000,contact=1)
+                while not dict["stop_flag"]:
+                    context.run_action_direct(JActionType.LongPress, fight_btn_param)
+                    time.sleep(0.2)
+
+            # 判断第一个能量条是否满了
+            def if_energy_one_full():
+                screen_cap = dict["screen_cap"]
+                # 获取坐标 (y, x) 的像素值
+                # 注意：OpenCV 中数组索引是 [row, col]，即 [y, x]
+                pixel = screen_cap[637, 588]
+
+                # 判断颜色是否为黄色 (BGR 格式为 [0, 220~255, 255])
+                # is_yellow = ((255 >= pixel[1] >= 200) and pixel[2] == 255)
+                is_yellow = pixel[2] == 255
+                if is_yellow:
+                    print("第一个能量条满了")
+                    return True
+                else:
+                    print(f"第一个能量条未满,当前像素值为{pixel}")
+                    return False
+
+            # 检查42姐是否熔火值满了
+            def if_check_42_angry_full():
+                # RGB(251, 98, 109)
+                # x=470 y =637
+                pixel = dict["screen_cap"][637, 470]
+                is_angry_full = (pixel[0] == 109 and pixel[1] == 98 and pixel[2] == 251)
+                if is_angry_full:
+                    print("42姐熔火值满了")
+                    return True
+                else:
+                    print(f"42姐熔火值未满,当前像素值为{pixel}")
+                    return False
+
+            # 检查42姐是大招充能完毕
+            def if_check_42_ultra_skill_full():
+                # 获取目标点像素
+                pixel_raw = dict["screen_cap"][600, 889]
+                # 转换为 int 类型，防止 uint8 减法溢出报错
+                pixel = pixel_raw.astype(int)
+
+                # 1. 处理闪烁情况：如果 R, G, B 三个通道都非常亮（比如都大于 240）
+                # 这样可以覆盖 [255,255,255], [248,255,255], [244,251,255] 等情况
+                if all(c >= 240 for c in pixel):
+                    print(f"42姐大招充能完毕 (检测到高亮闪烁: {pixel})")
+                    return True
+
+                # 2. 定义标准值和范围
+                # 针对你提供的 [133, 140, 255] 等颜色，我们需要调大阈值
+                target = np.array([74, 81, 230])
+                threshold = 80  # 增大阈值以兼容变色过程
+
+                # 计算欧几里得距离或通道差
+                # 使用 np.abs 配合 int 类型处理
+                diff = np.abs(pixel - target)
+                is_skill_full = all(diff <= threshold)
+
+                if is_skill_full:
+                    print(f"42姐大招充能完毕")
+                    return True
+                else:
+                    print(f"42姐大招充能未完毕, 当前像素值为 {pixel}")
+                    return False
+
+            # 秋丽使用战技
+            qiu_li_skill_click_param = JClick(
+                target=(954, 421, 43, 37),
+            )
+            def qiu_li_use_skill():
+                print("秋丽使用战技")
+                context.run_action_direct(JActionType.Click, qiu_li_skill_click_param)
+
+            # 42姐使用大招,md不能用数字命名变量开头，改叫莱万汀
+            lwt_use_ultra_param = JLongPress(
+                target=(909, 607, 43, 37),
+            )
+            def lwt_use_ultra_skill():
+                print("42姐使用大招")
+                context.run_action_direct(JActionType.LongPress, lwt_use_ultra_param)
+
+            # 42姐使用战技
+            lwt_use_skill_param = JClick(
+                target=(909, 607, 43, 37),
+            )
+            def lwt_use_skill():
+                print("42姐使用战技")
+                context.run_action_direct(JActionType.Click, lwt_use_skill_param)
+
+            # 战斗长按线程
+            fight_btn_thread = threading.Thread(target=long_press_worker,daemon=True)
+            fight_btn_thread.start()
+
+            while not dict["stop_flag"]:
+                dict["screen_cap"] = controller.post_screencap().wait().get()
+                time.sleep(0.7)
+                # 检查42姐大招满了就放
+                ultra_ready = if_check_42_ultra_skill_full()
+                if ultra_ready:
+                    lwt_use_ultra_skill()
+                    time.sleep(1.5)
+                    continue
+
+                angry_ready = if_check_42_angry_full()
+                skill_energy_ready = if_energy_one_full()
+                # 42姐熔火值满了，且能量条满了，就使用42战技，充能42大招
+                if angry_ready and skill_energy_ready:
+                    lwt_use_skill()
+                    time.sleep(1.5)
+                    continue
+                
+                # 42姐熔火值没满，且能量条满了，就使用秋丽战技,上灼热，给42姐补充熔火
+                if not angry_ready and skill_energy_ready:
+                    qiu_li_use_skill()
+                    time.sleep(1.5)
+                    continue
+
+
+
+            # 队伍配置：1 42姐 2 狼卫 3 秋丽 4 小绵羊
+            # 检查能量条
+            # 检查42姐熔火条
+            # 检查42姐大招是否满了
+            # 如果42姐大招满了，就长按使用大招
+            # 如果熔火条没满。且能量条大于2，优先使用秋丽战技。
+            # 如果熔火条没满。有42姐，狼卫，秋丽，小绵羊，的连携技出现，就使用连携技
+
+
+
+            return True
+        except Exception as e:
+            print(f"发生了其他未知的错误: {e}")
+            return False
+
 class WalkByPointsReco(CustomAction):
     # 定义一个中文别名
     ACTION_NAME = "根据提供点进行人物移动_Func"
