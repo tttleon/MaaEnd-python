@@ -1,5 +1,5 @@
 {
-  "$__mpe_anchor_重新检查是否有线索交流开启1_新建Pipeline6": {
+  "$__mpe_anchor_重新检查是否有线索交流开启1_新建Pipeline3": {
     "$__mpe_code": {
       "position": {
         "x": 19776,
@@ -7,24 +7,24 @@
       }
     }
   },
-  "$__mpe_anchor_重新检查是否有线索交流开启2_新建Pipeline6": {
+  "$__mpe_anchor_重新检查是否有线索交流开启2_新建Pipeline3": {
     "$__mpe_code": {
       "position": {
-        "x": 21619,
-        "y": 782
+        "x": 21458,
+        "y": 800
       }
     }
   },
-  "$__mpe_config_新建Pipeline6": {
+  "$__mpe_config_新建Pipeline3": {
     "$__mpe_code": {
-      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\拜访好友-生产助力.json",
-      "filename": "新建Pipeline6",
-      "lastSyncTime": 1771071421756,
+      "filePath": "C:\\Users\\leon\\code_temp\\MaaEnd-python\\assets\\resource\\pipeline\\拜访好友-线索交流.json",
+      "filename": "新建Pipeline3",
+      "lastSyncTime": 1771332036311,
       "prefix": "",
       "savedViewport": {
-        "x": -12296,
-        "y": -113,
-        "zoom": 0.66
+        "x": -16955,
+        "y": -98,
+        "zoom": 0.87
       },
       "version": "v1.1.2"
     }
@@ -35,6 +35,10 @@
         "x": 20776,
         "y": 503
       }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
     },
     "next": [
       "拜访好友-结束拜访"
@@ -136,15 +140,15 @@
           "打开访客终端"
         ],
         "roi": [
-          47,
-          277,
-          112,
-          33
+          11,
+          204,
+          217,
+          166
         ]
       },
       "type": "OCR"
     },
-    "timeout": 4000
+    "timeout": 3000
   },
   "拜访好友-找开了线索交流的": {
     "$__mpe_code": {
@@ -160,6 +164,7 @@
     "next": [
       "拜访好友-确定"
     ],
+    "pre_delay": 1000,
     "recognition": {
       "param": {
         "template": [
@@ -186,9 +191,6 @@
     "next": [
       "拜访好友-结束"
     ],
-    "on_error": [
-      "[Anchor]重新检查是否有线索交流开启2"
-    ],
     "recognition": {
       "param": {
         "expected": [
@@ -202,8 +204,7 @@
         ]
       },
       "type": "OCR"
-    },
-    "timeout": 3000
+    }
   },
   "拜访好友-检查是否列表已经滑动到了底部": {
     "$__mpe_code": {
@@ -421,6 +422,9 @@
     "next": [
       "拜访好友-检查剩余情报交流次数"
     ],
+    "on_error": [
+      "[Anchor]重新检查是否有线索交流开启2"
+    ],
     "recognition": {
       "param": {
         "expected": [
@@ -434,7 +438,8 @@
         ]
       },
       "type": "OCR"
-    }
+    },
+    "timeout": 3000
   },
   "拜访好友_加载中界面判断": {
     "$__mpe_code": {
