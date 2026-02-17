@@ -1,16 +1,16 @@
 {
   "$__mpe_config_新建Pipeline7": {
     "$__mpe_code": {
-      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\进行1次简易制作.json",
+      "filePath": "C:\\Users\\leon\\code_temp\\MaaEnd-python\\assets\\resource\\pipeline\\进行1次简易制作.json",
       "filename": "新建Pipeline7",
-      "lastSyncTime": 1770211249951,
+      "lastSyncTime": 1771331128782,
       "prefix": "",
       "savedViewport": {
-        "x": -7609,
-        "y": 239,
-        "zoom": 0.53
+        "x": -10333,
+        "y": 185,
+        "zoom": 0.66
       },
-      "version": "v1.0.3"
+      "version": "v1.1.2"
     }
   },
   "进行1次简易制作": {
@@ -27,8 +27,8 @@
   "进行1次简易制作-制作": {
     "$__mpe_code": {
       "position": {
-        "x": 16840,
-        "y": 376
+        "x": 16858,
+        "y": 90
       }
     },
     "action": {
@@ -57,8 +57,8 @@
   "进行1次简易制作-制作采成功": {
     "$__mpe_code": {
       "position": {
-        "x": 17257,
-        "y": 359
+        "x": 17248,
+        "y": 45
       }
     },
     "action": {
@@ -91,12 +91,8 @@
         "y": 192
       }
     },
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
     "next": [
-      "进行1次简易制作-柑实粉末"
+      "进行1次简易制作-点击列表的任意一个可制作"
     ],
     "pre_delay": 400,
     "recognition": {
@@ -136,33 +132,7 @@
       "进行1次简易制作-简易制作"
     ]
   },
-  "进行1次简易制作-材料不足": {
-    "$__mpe_code": {
-      "position": {
-        "x": 16829,
-        "y": -35
-      }
-    },
-    "next": [
-      "进行1次简易制作-返回"
-    ],
-    "pre_delay": 400,
-    "recognition": {
-      "param": {
-        "expected": [
-          "当前材料不足"
-        ],
-        "roi": [
-          1044,
-          628,
-          143,
-          39
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "进行1次简易制作-柑实粉末": {
+  "进行1次简易制作-点击列表的任意一个可制作": {
     "$__mpe_code": {
       "position": {
         "x": 16451,
@@ -174,25 +144,27 @@
       "type": "Click"
     },
     "next": [
-      "进行1次简易制作-材料不足",
       "进行1次简易制作-制作"
+    ],
+    "on_error": [
+      "进行1次简易制作-返回"
     ],
     "pre_delay": 400,
     "recognition": {
       "param": {
         "expected": [
-          "柑实粉末"
+          "可制作"
         ],
         "roi": [
-          115,
-          190,
-          92,
-          33
+          113,
+          184,
+          135,
+          379
         ]
       },
       "type": "OCR"
     },
-    "timeout": 2000
+    "timeout": 4000
   },
   "进行1次简易制作-简易制作": {
     "$__mpe_code": {
