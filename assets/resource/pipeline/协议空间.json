@@ -19,11 +19,11 @@
     "$__mpe_code": {
       "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\协议空间.json",
       "filename": "协议空间",
-      "lastSyncTime": 1771723840418,
+      "lastSyncTime": 1771723920824,
       "prefix": "",
       "savedViewport": {
         "x": -7712,
-        "y": 210,
+        "y": 211,
         "zoom": 0.76
       },
       "version": "v1.1.4"
@@ -416,10 +416,10 @@
     "action": {
       "param": {
         "target": [
-          934,
-          449,
-          22,
-          20
+          940,
+          300,
+          12,
+          12
         ]
       },
       "type": "Click"
