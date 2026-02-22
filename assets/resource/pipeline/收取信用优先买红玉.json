@@ -17,23 +17,23 @@
   },
   "$__mpe_config_新建Pipeline2": {
     "$__mpe_code": {
-      "filePath": "C:\\Users\\leon\\code_temp\\MaaEnd-python\\assets\\resource\\pipeline\\收取信用优先买红玉.json",
+      "filePath": "E:\\code\\endMaa-python\\assets\\resource\\pipeline\\收取信用优先买红玉.json",
       "filename": "新建Pipeline2",
-      "lastSyncTime": 1771332484779,
+      "lastSyncTime": 1771725540254,
       "prefix": "",
       "savedViewport": {
-        "x": -15995,
-        "y": -471,
-        "zoom": 0.76
+        "x": -13302,
+        "y": 128,
+        "zoom": 0.66
       },
-      "version": "v1.1.2"
+      "version": "v1.1.4"
     }
   },
   "收取信用优先买红玉-买其他东西": {
     "$__mpe_code": {
       "position": {
-        "x": 21542,
-        "y": 1247
+        "x": 21566,
+        "y": 1819
       }
     },
     "action": {
@@ -68,8 +68,8 @@
   "收取信用优先买红玉-信用不足结束": {
     "$__mpe_code": {
       "position": {
-        "x": 22013,
-        "y": 1359
+        "x": 22031,
+        "y": 1535
       }
     },
     "action": {
@@ -132,6 +132,8 @@
       "收取信用优先买红玉-搜寻嵌晶玉",
       "收取信用优先买红玉-刷新一次",
       "收取信用优先买红玉-刷新2次",
+      "收取信用优先买红玉-刷新3次",
+      "收取信用优先买红玉-刷新4次",
       "收取信用优先买红玉-买其他东西"
     ],
     "timeout": 4000
@@ -161,6 +163,78 @@
       "param": {
         "expected": [
           "3/4"
+        ],
+        "roi": [
+          945,
+          630,
+          119,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-刷新3次": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21609,
+        "y": 1223
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1083,
+          640,
+          68,
+          18
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认刷新"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "2/4"
+        ],
+        "roi": [
+          945,
+          630,
+          119,
+          38
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "收取信用优先买红玉-刷新4次": {
+    "$__mpe_code": {
+      "position": {
+        "x": 21616,
+        "y": 1480
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          1083,
+          640,
+          68,
+          18
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "收取信用优先买红玉-确认刷新"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "1/4"
         ],
         "roi": [
           945,
@@ -211,17 +285,17 @@
   "收取信用优先买红玉-搜寻嵌晶玉": {
     "$__mpe_code": {
       "position": {
-        "x": 21562,
-        "y": 374
+        "x": 21680,
+        "y": 322
       }
     },
     "action": {
       "param": {
         "target_offset": [
-          2,
-          -105,
-          -11,
-          24
+          8,
+          -77,
+          -13,
+          -4
         ]
       },
       "type": "Click"
@@ -470,8 +544,8 @@
   "收取信用优先买红玉-退出": {
     "$__mpe_code": {
       "position": {
-        "x": 22333,
-        "y": 1332
+        "x": 22439,
+        "y": 1521
       }
     },
     "action": {
